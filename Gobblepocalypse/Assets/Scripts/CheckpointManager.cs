@@ -12,9 +12,6 @@ public class CheckpointManager : MonoBehaviour
     //THE Checkpoint
     public Vector3 currentCheckpoint;
 
-    //Stored Collectables
-    public int storedCollectables = 0;
-
     //Collectables
     public GameObject collectablePrefab;
     public GameObject[] collectablesOnScreen;
