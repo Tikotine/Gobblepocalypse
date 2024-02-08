@@ -81,6 +81,9 @@ public class BossInterrupt : BossStates
 
     public override void DoActionUpdate(float dTime)
     {
+        // if want to implement stun is can 
 
+        //but for now it just go back to chase immediately
+        boss.SetCurrentState(new BossChase(boss));
     }
 }

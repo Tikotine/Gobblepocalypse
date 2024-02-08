@@ -286,7 +286,7 @@ MonoBehaviour:
   normalMoveSpeed: 0.1
   fastMoveSpeed: 5
   maxDistance: 500
-  preAtkDuration: 2.5
+  preAtkDuration: 3
   preAtkInterval: 20
 --- !u!1 &1362517914
 GameObject:
