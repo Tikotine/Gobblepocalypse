@@ -18,14 +18,19 @@ public class BossChase : BossStates
 {
     public BossChase(Boss boss): base(boss)
     {
-
+        boss.interruptHitbox.enabled = false;
+        boss.atkHitbox.enabled = true;
     }
+
+    float timer = 0;
 
     public override void DoActionUpdate(float dTime)
     {
-        if (boss.canMove)
+        timer += dTime;
+        if(timer > boss.preAtkInterval)
         {
-            boss.MoveToPlayer();
+            Debug.Log("boss changing to preatk");
+            boss.SetCurrentState(new BossCharge(boss));
         }
     }
 }
@@ -34,12 +39,20 @@ public class BossCharge : BossStates
 {
     public BossCharge(Boss boss) : base(boss)
     {
-
+        boss.interruptHitbox.enabled = true;
+        boss.atkHitbox.enabled = false;
     }
+
+    float timer = 0;
 
     public override void DoActionUpdate(float dTime)
     {
-
+        timer+= dTime;
+        if(timer > boss.preAtkDuration)
+        {
+            Debug.Log("boss changing to atk");
+            boss.SetCurrentState(new BossAttack(boss));
+        }
     }
 }
 
@@ -47,7 +60,8 @@ public class BossAttack : BossStates
 {
     public BossAttack(Boss boss) : base(boss)
     {
-
+        boss.interruptHitbox.enabled = false;
+        boss.atkHitbox.enabled = true;
     }
 
     public override void DoActionUpdate(float dTime)
@@ -60,7 +74,9 @@ public class BossInterrupt : BossStates
 {
     public BossInterrupt(Boss boss) : base(boss)
     {
-
+        boss.interruptHitbox.enabled = false;
+        boss.atkHitbox.enabled = false;
+        //both are set to false so can "spit player out"
     }
 
     public override void DoActionUpdate(float dTime)

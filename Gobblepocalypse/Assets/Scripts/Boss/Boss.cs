@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 //jme
 public class Boss : MonoBehaviour
@@ -11,6 +10,7 @@ public class Boss : MonoBehaviour
 
     public BoxCollider2D interruptHitbox;
     public BoxCollider2D atkHitbox;
+    public BoxCollider2D wallHitbox;
 
     public BossStates currentState;
 
@@ -21,24 +21,27 @@ public class Boss : MonoBehaviour
     public float normalMoveSpeed;
     public float fastMoveSpeed;
     public float maxDistance;
+    public float preAtkDuration = 3f;
+    public float preAtkInterval = 20; //more like time before pre attack but yea i guess default is 20sec?
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         SetCurrentState(new BossChase(this));
-        interruptHitbox.enabled = false;
-        atkHitbox.enabled= false;
+        /*interruptHitbox.enabled = false;
+        atkHitbox.enabled= false;*/
     }
 
     private void FixedUpdate()
     {
-        /*if(canMove)
-        {
-            MoveToPlayer(); 
-        }*/
         currentState.DoActionUpdate(Time.fixedDeltaTime);
         currentMoveSpeed = Mathf.Lerp(normalMoveSpeed, fastMoveSpeed, Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) / maxDistance);
+
+        if (canMove)
+        {
+            MoveToPlayer();
+        }
     }
 
     public void SetCurrentState(BossStates nextState) //SetCurrentState(new stateName(this));
@@ -64,18 +67,6 @@ public class Boss : MonoBehaviour
         return new Vector2(player.transform.position.x, transform.position.y);
     }
 
-    /*private void OnBecameInvisible()
-    {
-        Debug.Log("Boss OOR");
-        currentMoveSpeed = fastMoveSpeed;
-    }
-
-    private void OnBecameVisible()
-    {
-        Debug.Log("Boss IR");
-        currentMoveSpeed = normalMoveSpeed;
-    }*/
-
     private float checkDistToPlayer()
     {
         return player.transform.position.x - gameObject.transform.position.x;
@@ -83,9 +74,19 @@ public class Boss : MonoBehaviour
 
     #endregion
 
+    public void preAtk()
+    {
+
+    }
+
     public void attack()
     {
 
+    }
+
+    public void reduceInterval()
+    {
+        preAtkInterval -= 5; // - 5 sec
     }
 
     public void resetPos(float checkpointXaxis)
