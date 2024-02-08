@@ -32,6 +32,11 @@ public class BossChase : BossStates
             Debug.Log("boss changing to preatk");
             boss.SetCurrentState(new BossCharge(boss));
         }
+
+        if (boss.canMove)
+        {
+            boss.MoveToPlayer();
+        }
     }
 }
 
@@ -53,6 +58,11 @@ public class BossCharge : BossStates
             Debug.Log("boss changing to atk");
             boss.SetCurrentState(new BossAttack(boss));
         }
+
+        if (boss.canMove)
+        {
+            boss.MoveToPlayer();
+        }
     }
 }
 
@@ -66,7 +76,7 @@ public class BossAttack : BossStates
 
     public override void DoActionUpdate(float dTime)
     {
-
+        boss.attack();
     }
 }
 

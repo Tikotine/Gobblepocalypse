@@ -8,6 +8,8 @@ public class Boss : MonoBehaviour
 
     public GameObject player;
 
+    public Camera cam;
+
     public BoxCollider2D interruptHitbox;
     public BoxCollider2D atkHitbox;
     public BoxCollider2D wallHitbox;
@@ -27,21 +29,15 @@ public class Boss : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");
+        cam = FindObjectOfType<Camera>();
         rb = GetComponent<Rigidbody2D>();
         SetCurrentState(new BossChase(this));
-        /*interruptHitbox.enabled = false;
-        atkHitbox.enabled= false;*/
     }
 
     private void FixedUpdate()
     {
         currentState.DoActionUpdate(Time.fixedDeltaTime);
         currentMoveSpeed = Mathf.Lerp(normalMoveSpeed, fastMoveSpeed, Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) / maxDistance);
-
-        if (canMove)
-        {
-            MoveToPlayer();
-        }
     }
 
     public void SetCurrentState(BossStates nextState) //SetCurrentState(new stateName(this));
@@ -81,7 +77,8 @@ public class Boss : MonoBehaviour
 
     public void attack()
     {
-
+        //rush across scrn, uses cam coz its the viewport
+        transform.position = Vector2.Lerp(transform.position, cam.transform.position, Time.deltaTime * 4);
     }
 
     public void reduceInterval()
