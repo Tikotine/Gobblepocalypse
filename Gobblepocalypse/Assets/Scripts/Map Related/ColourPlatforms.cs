@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class ColourPlatforms : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class ColourPlatforms : MonoBehaviour
     //Collider
     public TilemapCollider2D col;
 
+    //Bar
+    public Slider bar;
+
     private void Start()
     {
         //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -31,6 +35,7 @@ public class ColourPlatforms : MonoBehaviour
     void FixedUpdate()
     {
         Transition();
+        bar.value = 1 - targetPoint;
     }
 
     void Transition()

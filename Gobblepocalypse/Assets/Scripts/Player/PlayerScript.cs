@@ -2,7 +2,9 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -37,6 +39,8 @@ public class PlayerScript : MonoBehaviour
     public float attackCooldownDuration;
     public float attackCooldownTimer;
 
+    //Charge Count
+    public TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Awake()
@@ -157,6 +161,8 @@ public class PlayerScript : MonoBehaviour
             }
         }
         #endregion
+
+        text.text = charges.ToString();
     }
 
 }
