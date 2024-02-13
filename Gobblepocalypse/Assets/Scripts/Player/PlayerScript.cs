@@ -125,6 +125,7 @@ public class PlayerScript : MonoBehaviour
             //Start attack timer
             attackTimer = attackDuration;   //Set the timer to its duration
             attackTimerActive = true;       //Begin the attack timer countdown
+            //Change colour here
         }
 
         if (attackTimerActive == true && isAttacking == true)   //If the attack timer is on

@@ -1,12 +1,15 @@
 using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class ColourPlatforms : MonoBehaviour
 {
     //Colour transition
-    SpriteRenderer spriteRenderer;
+    //SpriteRenderer spriteRenderer;
+    Tilemap tilemap;
     public Material material;
     public Color[] colors;
     private int currentColorIndex = 0;
@@ -15,16 +18,17 @@ public class ColourPlatforms : MonoBehaviour
     public float time;
 
     //Collider
-    public BoxCollider2D col;
+    public TilemapCollider2D col;
 
     private void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        col = gameObject.GetComponent<BoxCollider2D>();
+        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        tilemap = gameObject.GetComponent<Tilemap>();
+        col = gameObject.GetComponent<TilemapCollider2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Transition();
     }
@@ -35,12 +39,13 @@ public class ColourPlatforms : MonoBehaviour
         {
             col.enabled = true; //Enable hitbox
             targetPoint += Time.deltaTime / time;   //Increment targetpoint by time passed
-            spriteRenderer.color = Color.Lerp(colors[currentColorIndex], colors[targetColorIndex], targetPoint);    //Colour change
+            tilemap.color = Color.Lerp(colors[currentColorIndex], colors[targetColorIndex], targetPoint);    //Colour change
         }
 
         if (targetPoint >= 1)
         { 
             col.enabled = false;    //Disbale Hitbox
+            targetPoint = 1;
         }
 
         /*if (targetPoint >= 1f)
