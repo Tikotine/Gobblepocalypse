@@ -25,6 +25,10 @@ public class CheckpointManager : MonoBehaviour
     //Platforms
     public GameObject[] platformList;
 
+    //Boss stuff
+    public GameObject boss;
+    public float bossRepsawnDistance;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -67,6 +71,7 @@ public class CheckpointManager : MonoBehaviour
     {
         currentCheckpoint = new Vector3(checkpointPos[i].x, checkpointPos[i].y, 0f);
         barProgress = bar.value;
+        //TP boss a specific distance behind checkpoint
     }
 
     public void MoveToCheckpoint()  //method to move the player to current checkpoint when respawning
