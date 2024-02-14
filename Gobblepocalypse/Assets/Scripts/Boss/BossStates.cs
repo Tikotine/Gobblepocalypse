@@ -20,6 +20,7 @@ public class BossChase : BossStates
     {
         boss.interruptHitbox.enabled = false;
         boss.atkHitbox.enabled = true;
+        boss.changeColor(Color.red);
     }
 
     float timer = 0;
@@ -46,6 +47,7 @@ public class BossCharge : BossStates
     {
         boss.interruptHitbox.enabled = true;
         boss.atkHitbox.enabled = false;
+        boss.changeColor(Color.blue);
     }
 
     float timer = 0;
@@ -72,6 +74,7 @@ public class BossAttack : BossStates
     {
         boss.interruptHitbox.enabled = false;
         boss.atkHitbox.enabled = true;
+        boss.changeColor(Color.red);
     }
 
     public override void DoActionUpdate(float dTime)
@@ -89,6 +92,7 @@ public class BossInterrupt : BossStates
         //both are set to false so can "spit player out"
         boss.canMove = false;
         boss.thrownPlayer = false;
+        boss.changeColor(Color.green);
     }
 
     float timer = 0;

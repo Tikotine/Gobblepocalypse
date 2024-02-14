@@ -102,4 +102,10 @@ public class Boss : MonoBehaviour
         player.GetComponent<Rigidbody2D>().AddForce(player.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
         thrownPlayer = true;
     }
+
+    //temp
+    public void changeColor(Color col)
+    {
+        atkHitbox.GetComponent<SpriteRenderer>().color = col;
+    }
 }
