@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public ColourPlatforms[] platformList;
+    public GameObject[] platformList;
     public float timeRestored;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        platformList = GameObject.FindGameObjectsWithTag("ColourPlatform");
     }
 
     // Update is called once per frame
@@ -23,10 +23,10 @@ public class Collectable : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            foreach (ColourPlatforms n in platformList)
+            foreach (GameObject n in platformList)
             {
-
-                n.targetPoint -= timeRestored / n.time;
+                ColourPlatforms cp = n.GetComponent<ColourPlatforms>();
+                cp.targetPoint -= timeRestored / cp.time;
             }
 
             Destroy(gameObject);

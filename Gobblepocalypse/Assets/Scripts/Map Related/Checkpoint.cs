@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -9,6 +10,8 @@ public class Checkpoint : MonoBehaviour
     public int checkpointNo;    //In case need to track the individual checkpoints
     public GameObject player;
     public CheckpointManager cm;
+    public Color activatedColor;
+
     //public BossManager bm;
     private bool checkpointActive = false;
 
@@ -35,6 +38,9 @@ public class Checkpoint : MonoBehaviour
             }
 
             cm.SetCheckpoint(checkpointNo);     //Sets the checkpoint using the checkpointmanager
+
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().color = activatedColor;
 
             /*if (bm != null)
             {

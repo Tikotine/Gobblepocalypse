@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -17,10 +18,20 @@ public class CheckpointManager : MonoBehaviour
     public GameObject[] collectablesOnScreen;
     public Vector3[] collectablesLocation;
 
+    //Bar
+    public Slider bar;
+    public float barProgress;
+
+    //Platforms
+    public GameObject[] platformList;
+
     // Start is called before the first frame update
     void Awake()
     {
+        platformList = GameObject.FindGameObjectsWithTag("ColourPlatform");
         player = GameObject.FindWithTag("Player");
+
+        barProgress = bar.value;
 
         if (checkpointWaypoints != null)  //If checkpoint waypoint array is not empty
         {
@@ -28,8 +39,8 @@ public class CheckpointManager : MonoBehaviour
             {
                 if (i == 0) //If first checkpoint, set spawn to beginning
                 {
-                    checkpointPos[i].x = 0f;
-                    checkpointPos[i].y = 0f;
+                    checkpointPos[i].x = -10f;
+                    checkpointPos[i].y = -2.5f;
                 }
 
                 else  //Else set spawnpoint to the checkpoint waypoint
@@ -46,6 +57,8 @@ public class CheckpointManager : MonoBehaviour
                     collectablesLocation[i] = collectablesOnScreen[i].transform.position;
                 }
             }
+
+            currentCheckpoint = checkpointPos[0];
         }
 
     }
@@ -53,29 +66,29 @@ public class CheckpointManager : MonoBehaviour
     public void SetCheckpoint(int i)    //Method to update the current checkpoint
     {
         currentCheckpoint = new Vector3(checkpointPos[i].x, checkpointPos[i].y, 0f);
+        barProgress = bar.value;
     }
 
     public void MoveToCheckpoint()  //method to move the player to current checkpoint when respawning
     {
         player.transform.position = currentCheckpoint;
+
+        foreach (GameObject n in platformList)
+        {
+            ColourPlatforms cp = n.GetComponent<ColourPlatforms>();
+            cp.targetPoint = 1 - barProgress;
+        }
+
+        bar.value = barProgress;
     }
 
-    /*
+    
     public void RetryColelctablesReset()
     {
         for (int i = 0; i < collectablesOnScreen.Length; i++)
         {
-            if (collectablesCollected[i] == true && collectablesStored[i] == false)
-            {
-                Instantiate(collectablesPrefabs[i], collectablesLocation[i], Quaternion.identity);
-                collectablesCollected[i] = false;
-            }
-
-            if (collectablesStored[i] == true)
-            {
-                collectablesCollected[i] = true;
-            }
+                Instantiate(collectablePrefab, collectablesLocation[i], Quaternion.identity);
         }
     }
-    */ //Figure out how the collectables are going to respawn
+     //Figure out how the collectables are going to respawn
 }
