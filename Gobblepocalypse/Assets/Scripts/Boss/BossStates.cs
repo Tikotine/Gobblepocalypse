@@ -87,13 +87,28 @@ public class BossInterrupt : BossStates
         boss.interruptHitbox.enabled = false;
         boss.atkHitbox.enabled = false;
         //both are set to false so can "spit player out"
+        boss.canMove = false;
+        boss.thrownPlayer = false;
     }
+
+    float timer = 0;
 
     public override void DoActionUpdate(float dTime)
     {
-        // if want to implement stun is can 
+        timer+= dTime;
 
-        //but for now it just go back to chase immediately
-        boss.SetCurrentState(new BossChase(boss));
+        //player pos set to head pos n then spit player out
+        if (!boss.thrownPlayer)
+        {
+            boss.throwPlayer();
+        }
+
+        // stop moving for like idk 2 seconds
+        if (timer > boss.stunDuration)
+        {
+            boss.canMove = true;
+            //go back to chase 
+            boss.SetCurrentState(new BossChase(boss));
+        }
     }
 }

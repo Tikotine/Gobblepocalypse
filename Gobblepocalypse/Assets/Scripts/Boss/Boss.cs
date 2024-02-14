@@ -18,6 +18,7 @@ public class Boss : MonoBehaviour
 
     public bool canInterrupt;
     public bool canMove;
+    public bool thrownPlayer = false;
 
     public float currentMoveSpeed;
     public float normalMoveSpeed;
@@ -25,6 +26,8 @@ public class Boss : MonoBehaviour
     public float maxDistance;
     public float preAtkDuration = 3f;
     public float preAtkInterval = 20; //more like time before pre attack but yea i guess default is 20sec?
+    public float stunDuration = 2;
+    public float yeetForce = 15;
 
     private void Awake()
     {
@@ -81,13 +84,22 @@ public class Boss : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, cam.transform.position, Time.deltaTime * 4);
     }
 
-    public void reduceInterval()
+    public void reduceInterval(int amt)
     {
-        preAtkInterval -= 5; // - 5 sec
+        preAtkInterval -= amt; // eg - 5 sec
     }
 
     public void resetPos(float checkpointXaxis)
     {
         transform.position = new Vector2(checkpointXaxis, transform.position.y);
+    }
+
+    public void throwPlayer()
+    {
+        player.transform.position = new Vector2(player.transform.position.x, transform.position.y);
+        //sry i lazy aha
+        player.GetComponent<Rigidbody2D>().velocity= Vector2.zero;
+        player.GetComponent<Rigidbody2D>().AddForce(player.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
+        thrownPlayer = true;
     }
 }
