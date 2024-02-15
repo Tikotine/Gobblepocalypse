@@ -47,6 +47,7 @@ public class Head : MonoBehaviour
                 cm.MoveToCheckpoint();      //Move Player to checkpoint
                 cm.RetryColelctablesReset();    //Reset Collectables
                 cm.BossCheckpointReset();   //Reset boss to last checkpoint
+                ps.ResetTimers();   //Reset attackmode timers
                 boss.SetCurrentState(new BossChase(boss));
             }
         }

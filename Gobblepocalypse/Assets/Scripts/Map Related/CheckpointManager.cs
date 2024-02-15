@@ -100,7 +100,10 @@ public class CheckpointManager : MonoBehaviour
     {
         for (int i = 0; i < collectablesOnScreen.Length; i++)
         {
+            if (collectablesOnScreen[i] == null)
+            {
                 Instantiate(collectablePrefab, collectablesLocation[i], Quaternion.identity);
+            }
         }
     }
      //Figure out how the collectables are going to respawn

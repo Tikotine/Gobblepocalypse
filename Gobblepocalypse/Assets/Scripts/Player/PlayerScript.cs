@@ -177,4 +177,9 @@ public class PlayerScript : MonoBehaviour
         text.text = charges.ToString();
     }
 
+    public void ResetTimers()
+    { 
+        attackTimer = 0;
+        attackCooldownTimer = attackCooldownDuration;
+    }
 }

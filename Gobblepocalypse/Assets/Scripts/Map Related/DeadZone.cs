@@ -18,6 +18,7 @@ public class DeadZone : MonoBehaviour
             cm.MoveToCheckpoint();      //Move Player to checkpoint
             cm.RetryColelctablesReset();    //Reset Collectables
             cm.BossCheckpointReset();   //Reset boss to last checkpoint
+            cm.player.GetComponent<PlayerScript>().ResetTimers();   //Reset attackmode timers
         }
     }
 }

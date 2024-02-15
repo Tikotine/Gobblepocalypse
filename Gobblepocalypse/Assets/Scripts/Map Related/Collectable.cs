@@ -27,6 +27,10 @@ public class Collectable : MonoBehaviour
             {
                 ColourPlatforms cp = n.GetComponent<ColourPlatforms>();
                 cp.targetPoint -= timeRestored / cp.time;
+                if (cp.targetPoint < 0)
+                { 
+                    cp.targetPoint = 0;
+                }
             }
 
             Destroy(gameObject);
