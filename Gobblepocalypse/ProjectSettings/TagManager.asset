@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CheckpointManager
   - ColourPlatform
+  - Boss
   layers:
   - Default
   - TransparentFX

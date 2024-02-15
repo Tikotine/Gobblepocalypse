@@ -99,7 +99,7 @@ public class Boss : MonoBehaviour
         player.transform.position = new Vector2(player.transform.position.x, transform.position.y);
         //sry i lazy aha
         player.GetComponent<Rigidbody2D>().velocity= Vector2.zero;
-        player.GetComponent<Rigidbody2D>().AddForce(player.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
+        player.GetComponent<Rigidbody2D>().AddForce(cam.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
         thrownPlayer = true;
     }
 

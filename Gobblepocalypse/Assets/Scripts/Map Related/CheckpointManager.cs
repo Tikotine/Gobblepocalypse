@@ -27,6 +27,7 @@ public class CheckpointManager : MonoBehaviour
 
     //Boss stuff
     public GameObject boss;
+    private Boss bs;
     public float bossRepsawnDistance;
 
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class CheckpointManager : MonoBehaviour
     {
         platformList = GameObject.FindGameObjectsWithTag("ColourPlatform");
         player = GameObject.FindWithTag("Player");
+        boss = GameObject.FindWithTag("Boss");
+        bs = boss.GetComponent<Boss>();
 
         barProgress = bar.value;
 
@@ -85,9 +88,14 @@ public class CheckpointManager : MonoBehaviour
         }
 
         bar.value = barProgress;
+        player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
-    
+    public void BossCheckpointReset()
+    {
+        bs.resetPos(currentCheckpoint.x - bossRepsawnDistance);
+    }
+
     public void RetryColelctablesReset()
     {
         for (int i = 0; i < collectablesOnScreen.Length; i++)

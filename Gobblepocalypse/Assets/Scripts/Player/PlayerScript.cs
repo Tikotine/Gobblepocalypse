@@ -42,11 +42,19 @@ public class PlayerScript : MonoBehaviour
     //Charge Count
     public TextMeshProUGUI text;
 
+    //Colours
+    private SpriteRenderer sr;
+    public Color chargingColour;
+    public Color attackingColour;
+    public Color attackCooldownColor;
+    public Color defaultColour;
+
     // Start is called before the first frame update
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();   //Reference the players rigidbody2D
         lr = gameObject.GetComponent<LineRenderer>();   //Reference the player's line renderer
+        sr = GetComponent<SpriteRenderer>();
     }
 
 
@@ -96,6 +104,7 @@ public class PlayerScript : MonoBehaviour
             isCharging = true;
             chargeTimerActive = true;       //Toggle all booleans
             rb.velocity = Vector3.zero;     //Set velocity of player to 0
+            sr.color = chargingColour;
         }
 
         if (isCharging == true && Input.GetKeyUp(KeyCode.Mouse1))   //On right mouse release
@@ -104,6 +113,7 @@ public class PlayerScript : MonoBehaviour
             isCharging = false;
             chargeTimerActive = false;
             chargeTimer = 0;    //Reset charge timer
+            sr.color = defaultColour;
         }
 
         if (chargeTimerActive == true && isCharging == true)    //If charge timer active and player is charging
@@ -129,7 +139,7 @@ public class PlayerScript : MonoBehaviour
             //Start attack timer
             attackTimer = attackDuration;   //Set the timer to its duration
             attackTimerActive = true;       //Begin the attack timer countdown
-            //Change colour here
+            sr.color = attackingColour; //Change colour here
         }
 
         if (attackTimerActive == true && isAttacking == true)   //If the attack timer is on
@@ -152,12 +162,14 @@ public class PlayerScript : MonoBehaviour
             if (attackCooldownTimer < attackCooldownDuration)
             { 
                 attackCooldownTimer += Time.deltaTime;  //increase timer by time passed until duration is hit
+                sr.color = attackCooldownColor;
             }
 
             if (attackCooldownTimer >= attackCooldownDuration)
             {
                 attackCooldownTimerActive = false;  //Turn off the cooldown boolean
                 attackCooldownTimer = 0;    //Reset timer
+                sr.color = defaultColour;
             }
         }
         #endregion

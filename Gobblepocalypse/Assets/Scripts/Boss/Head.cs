@@ -8,10 +8,15 @@ public class Head : MonoBehaviour
     public Boss boss;
     public Camera cam;
 
+    private CheckpointManager cm;
+    private PlayerScript ps;
+
     private void Start()
     {
         boss = GetComponentInParent<Boss>();   
         cam = FindObjectOfType<Camera>();
+        cm = FindObjectOfType<CheckpointManager>();
+        ps = FindObjectOfType<PlayerScript>();
     }
 
     private void FixedUpdate()
@@ -29,7 +34,7 @@ public class Head : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (isBossInPreAtk(boss.currentState.ToString()))
+            if (isBossInPreAtk(boss.currentState.ToString()) && ps.isAttacking == true)
             {
                 //if in preatk state true
                 Debug.Log("player interrupted boss");
@@ -39,6 +44,10 @@ public class Head : MonoBehaviour
             {
                 //if in preatk state false
                 Debug.Log("player hit by boss");
+                cm.MoveToCheckpoint();      //Move Player to checkpoint
+                cm.RetryColelctablesReset();    //Reset Collectables
+                cm.BossCheckpointReset();   //Reset boss to last checkpoint
+                boss.SetCurrentState(new BossChase(boss));
             }
         }
     }
