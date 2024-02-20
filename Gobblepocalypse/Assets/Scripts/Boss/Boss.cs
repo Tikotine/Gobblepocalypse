@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 //jme
 public class Boss : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class Boss : MonoBehaviour
     public BoxCollider2D wallHitbox;
 
     public BossStates currentState;
+
+    public Image stateIndicator;
+    public Sprite[] stateimages; //0 chase, 1 preatk, 2 int, 3 atk
+    private int activeStateImg = 0;
+    public TextMeshProUGUI distanceText;
 
     public bool canInterrupt;
     public bool canMove;
@@ -41,6 +48,7 @@ public class Boss : MonoBehaviour
     {
         currentState.DoActionUpdate(Time.fixedDeltaTime);
         currentMoveSpeed = Mathf.Lerp(normalMoveSpeed, fastMoveSpeed, Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) / maxDistance);
+        distanceText.text = Mathf.RoundToInt(checkDistToPlayer()).ToString() + " m";
     }
 
     public void SetCurrentState(BossStates nextState) //SetCurrentState(new stateName(this));
@@ -73,11 +81,6 @@ public class Boss : MonoBehaviour
 
     #endregion
 
-    public void preAtk()
-    {
-
-    }
-
     public void attack()
     {
         //rush across scrn, uses cam coz its the viewport
@@ -103,9 +106,40 @@ public class Boss : MonoBehaviour
         thrownPlayer = true;
     }
 
-    //temp
+    /*//temp
     public void changeColor(Color col)
     {
         atkHitbox.GetComponent<SpriteRenderer>().color = col;
+    }*/
+
+    #region ui
+
+    public void resetStateImg()
+    {
+        activeStateImg = 0;
     }
+
+    public void changeStateImg()
+    {
+        if(activeStateImg == 3) //atk
+        {
+            //to reset
+            resetStateImg(); //chase
+        }
+        else if(activeStateImg == 2) //interrupted
+        {
+            resetStateImg(); //chase
+        }
+        else
+        {
+            activeStateImg++;
+        }
+    }
+
+    public void setStateImg()
+    {
+        stateIndicator.sprite = stateimages[activeStateImg];
+    }
+
+    #endregion
 }

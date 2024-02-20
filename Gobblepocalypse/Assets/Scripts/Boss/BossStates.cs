@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 //jme
 public abstract class BossStates 
@@ -20,7 +17,9 @@ public class BossChase : BossStates
     {
         boss.interruptHitbox.enabled = false;
         boss.atkHitbox.enabled = true;
-        boss.changeColor(Color.red);
+        //boss.changeColor(Color.red);
+        boss.resetStateImg();
+        boss.setStateImg();
     }
 
     float timer = 0;
@@ -47,7 +46,9 @@ public class BossCharge : BossStates
     {
         boss.interruptHitbox.enabled = true;
         boss.atkHitbox.enabled = false;
-        boss.changeColor(Color.blue);
+        //boss.changeColor(Color.blue);
+        boss.changeStateImg();
+        boss.setStateImg();
     }
 
     float timer = 0;
@@ -74,7 +75,9 @@ public class BossAttack : BossStates
     {
         boss.interruptHitbox.enabled = false;
         boss.atkHitbox.enabled = true;
-        boss.changeColor(Color.red);
+        //boss.changeColor(Color.red);
+        boss.changeStateImg();
+        boss.setStateImg();
     }
 
     public override void DoActionUpdate(float dTime)
@@ -92,7 +95,9 @@ public class BossInterrupt : BossStates
         //both are set to false so can "spit player out"
         boss.canMove = false;
         boss.thrownPlayer = false;
-        boss.changeColor(Color.green);
+        //boss.changeColor(Color.green);
+        boss.changeStateImg();
+        boss.setStateImg();
     }
 
     float timer = 0;
