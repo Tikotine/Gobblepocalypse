@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     //Vector Inputs
     public Vector3 mousePos;
     public Vector2 mouseDistance;
+    public Vector3 downwardForce;
 
     //Player Refs
     private Rigidbody2D rb;
@@ -101,10 +102,17 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse1))    //On right mouse hold
         { 
             canShoot = false;
-            isCharging = true;
             chargeTimerActive = true;       //Toggle all booleans
-            rb.velocity = Vector3.zero;     //Set velocity of player to 0
             sr.color = chargingColour;
+
+            if (isCharging == false)
+            {
+                Debug.Log("Stopped");
+                rb.velocity = Vector3.zero;     //Set velocity of player to 0
+                rb.AddForce(downwardForce, ForceMode2D.Impulse);
+            }
+
+            isCharging = true;
         }
 
         if (isCharging == true && Input.GetKeyUp(KeyCode.Mouse1))   //On right mouse release

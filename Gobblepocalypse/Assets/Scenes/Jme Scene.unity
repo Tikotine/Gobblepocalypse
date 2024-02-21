@@ -2273,6 +2273,7 @@ MonoBehaviour:
   attackCooldownTimerActive: 0
   mousePos: {x: 0, y: 0, z: 0}
   mouseDistance: {x: 0, y: 0}
+  downwardForce: {x: 0, y: -0.5, z: 0}
   lr: {fileID: 0}
   attackDuration: 5
   attackTimer: 0
