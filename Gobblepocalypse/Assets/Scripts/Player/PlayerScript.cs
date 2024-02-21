@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
 
     //Boolean Controls
     public bool canShoot = true;
+    public bool isShooting = false;
     public bool isCharging = false;
     public bool chargeTimerActive = false;
     public bool isAttacking = false;
@@ -63,21 +64,22 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         #region Shooting
-        if (Input.GetKey(KeyCode.Mouse0))   //If can shoot is true and left mouse is held
+        if (Input.GetKey(KeyCode.Mouse0) && !isCharging)   //If can shoot is true and left mouse is held
         {
             if (charges > 0)
             {
                 canShoot = true;
             }
 
-            else 
-            { 
+            else
+            {
                 canShoot = false;
             }
 
             if (canShoot == true)
             {
                 #region Calculate Shoot
+                isShooting = true;
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);     //Detect the mouse position with reference to main camera
                 mouseDistance = mousePos - transform.position;      //Calculate the distance from the mouse to the game object
                 #endregion
@@ -91,15 +93,16 @@ public class PlayerScript : MonoBehaviour
         }
 
         if (canShoot == true && isCharging == false && Input.GetKeyUp(KeyCode.Mouse0)) //On left mouse release
-        { 
+        {
             lr.enabled = false; //Disable Line Renderer
             rb.AddForce(mouseDistance * shootPower, ForceMode2D.Impulse);  //add a force to player in direction of mouse
             charges--;  //use a charge
+            isShooting = false;
         }
         #endregion
 
         #region Charging
-        if (Input.GetKey(KeyCode.Mouse1))    //On right mouse hold
+        if (Input.GetKey(KeyCode.Mouse1) && !isShooting)    //On right mouse hold
         { 
             canShoot = false;
             chargeTimerActive = true;       //Toggle all booleans
@@ -185,9 +188,19 @@ public class PlayerScript : MonoBehaviour
         text.text = charges.ToString();
     }
 
+    public void FixedUpdate()
+    {
+
+    }
+
     public void ResetTimers()
     { 
         attackTimer = 0;
         attackCooldownTimer = attackCooldownDuration;
+    }
+
+    public void ResetVelocity()
+    { 
+        rb.velocity = Vector3.zero;
     }
 }

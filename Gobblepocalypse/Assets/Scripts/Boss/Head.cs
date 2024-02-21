@@ -49,6 +49,7 @@ public class Head : MonoBehaviour
                 cm.BossCheckpointReset();   //Reset boss to last checkpoint
                 ps.ResetTimers();   //Reset attackmode timers
                 boss.SetCurrentState(new BossChase(boss));
+                ps.ResetVelocity(); //Reset player velocity
             }
         }
     }
