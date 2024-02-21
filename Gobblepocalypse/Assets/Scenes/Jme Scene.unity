@@ -899,7 +899,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822882612}
-  m_LocalRotation: {x: -0.07924447, y: 0.000000017680152, z: 0.0000000014054743, w: 0.9968552}
+  m_LocalRotation: {x: -0.07924447, y: 0.000000017680158, z: 0.0000000014054747, w: 0.9968552}
   m_LocalPosition: {x: -5.009987, y: -2.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2266,6 +2266,7 @@ MonoBehaviour:
   charges: 0
   chargeDuration: 0.5
   canShoot: 0
+  isShooting: 0
   isCharging: 0
   chargeTimerActive: 0
   isAttacking: 0
@@ -2304,7 +2305,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2336,7 +2337,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.18126869
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -12277,7 +12278,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909396637}
-  m_LocalRotation: {x: -0.07924447, y: 0.000000017680152, z: 0.0000000014054743, w: 0.9968552}
+  m_LocalRotation: {x: -0.07924447, y: 0.000000017680158, z: 0.0000000014054747, w: 0.9968552}
   m_LocalPosition: {x: -5.009987, y: -2.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -57,6 +57,7 @@ public class PlayerScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();   //Reference the players rigidbody2D
         lr = gameObject.GetComponent<LineRenderer>();   //Reference the player's line renderer
         sr = GetComponent<SpriteRenderer>();
+        lr.enabled = false;
     }
 
 
