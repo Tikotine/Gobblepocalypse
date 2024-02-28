@@ -12552,6 +12552,7 @@ MonoBehaviour:
   preAtkInterval: 5
   stunDuration: 2
   yeetForce: 15
+  moveBackDist: 500
 --- !u!50 &2026991851
 Rigidbody2D:
   serializedVersion: 4

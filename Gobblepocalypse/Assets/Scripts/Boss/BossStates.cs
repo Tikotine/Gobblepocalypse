@@ -110,6 +110,7 @@ public class BossInterrupt : BossStates
         if (!boss.thrownPlayer)
         {
             boss.throwPlayer();
+            boss.moveBack();
         }
 
         // stop moving for like idk 2 seconds

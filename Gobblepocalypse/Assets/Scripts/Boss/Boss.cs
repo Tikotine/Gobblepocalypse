@@ -35,6 +35,7 @@ public class Boss : MonoBehaviour
     public float preAtkInterval = 20; //more like time before pre attack but yea i guess default is 20sec?
     public float stunDuration = 2;
     public float yeetForce = 15;
+    public float moveBackDist = 500;
 
     private void Awake()
     {
@@ -106,11 +107,10 @@ public class Boss : MonoBehaviour
         thrownPlayer = true;
     }
 
-    /*//temp
-    public void changeColor(Color col)
+    public void moveBack()
     {
-        atkHitbox.GetComponent<SpriteRenderer>().color = col;
-    }*/
+        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x - moveBackDist, transform.position.y), Time.deltaTime);
+    }
 
     #region ui
 
