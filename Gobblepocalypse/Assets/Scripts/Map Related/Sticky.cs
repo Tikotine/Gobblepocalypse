@@ -35,9 +35,10 @@ public class Sticky : MonoBehaviour
             collision.gameObject.transform.position = stickLocation;
         }
 
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         { 
             isSticking = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
 

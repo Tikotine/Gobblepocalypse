@@ -46,8 +46,8 @@ public class CheckpointManager : MonoBehaviour
             {
                 if (i == 0) //If first checkpoint, set spawn to beginning
                 {
-                    checkpointPos[i].x = -10f;
-                    checkpointPos[i].y = -2.5f;
+                    checkpointPos[i].x = -0f;
+                    checkpointPos[i].y = -0f;
                 }
 
                 else  //Else set spawnpoint to the checkpoint waypoint
