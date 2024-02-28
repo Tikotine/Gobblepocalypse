@@ -32,6 +32,7 @@ public class Sticky : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && isSticking == true)
         {
+            collision.gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
             collision.gameObject.transform.position = stickLocation;
         }
 
@@ -47,6 +48,7 @@ public class Sticky : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isSticking = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
         }
     }
 }

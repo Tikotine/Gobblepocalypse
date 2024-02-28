@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Counter
+    uniqueID: 669243519
+    locked: 0
   - name: Boss
     uniqueID: 4001613387
     locked: 0

@@ -201,7 +201,10 @@ public class PlayerScript : MonoBehaviour
     }
 
     public void ResetVelocity()
-    { 
+    {
+        rb.freezeRotation = true;
         rb.velocity = Vector3.zero;
+        gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0,0,0);
+        rb.freezeRotation = false;
     }
 }
