@@ -41,6 +41,10 @@ public class PlayerScript : MonoBehaviour
     public float attackCooldownDuration;
     public float attackCooldownTimer;
 
+    //Attack UI
+    public Image attackUICooldown;
+    public TMP_Text attackTextCooldown;
+
     //Charge Count
     public TextMeshProUGUI text;
 
@@ -58,6 +62,9 @@ public class PlayerScript : MonoBehaviour
         lr = gameObject.GetComponent<LineRenderer>();   //Reference the player's line renderer
         sr = GetComponent<SpriteRenderer>();
         lr.enabled = false;
+
+        attackTextCooldown.gameObject.SetActive(false);
+        attackUICooldown.fillAmount = 0.0f;
     }
 
 
@@ -159,6 +166,8 @@ public class PlayerScript : MonoBehaviour
             if (attackTimer > 0)
             { 
                 attackTimer -= Time.deltaTime;  //Decrease timer until it hits 0
+                attackTextCooldown.text = Mathf.RoundToInt(attackCooldownTimer).ToString();
+                attackUICooldown.fillAmount = attackCooldownTimer / attackCooldownDuration;
             }
 
             if (attackTimer <= 0)
