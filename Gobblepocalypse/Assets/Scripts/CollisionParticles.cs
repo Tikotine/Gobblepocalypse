@@ -22,16 +22,12 @@ public class CollisionParticles : MonoBehaviour
         playerRb = player.GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
-    {
-        transform.position = player.transform.position;
-    }
-
     public void PlayParticles(Collision2D c)
     {
         SetParticleColour(c);   //Sets particle colour based on thing collided with
         CalculateParticles();   //Calculate the particles
         ps.Play();  //Play the particles on collision
+        Invoke("SelfDestruct", 3);  //destroy after 3 seconds
     }
 
     public void CalculateParticles()
@@ -55,5 +51,10 @@ public class CollisionParticles : MonoBehaviour
 
         ParticleSystem.MainModule mm = ps.main;     //Get the main module of the particle system
         mm.startColor = temp;       //Assign its colour to the surface colour
+    }
+
+    public void SelfDestruct()
+    { 
+        Destroy(gameObject);
     }
 }
