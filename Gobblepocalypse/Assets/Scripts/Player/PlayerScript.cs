@@ -45,8 +45,11 @@ public class PlayerScript : MonoBehaviour
     public Image attackUICooldown;
     public TMP_Text attackTextCooldown;
 
-    //Charge Count
-    public TextMeshProUGUI text;
+    //Charging UI
+    //public TextMeshProUGUI text;
+    public TMP_Text numberOfChargeText;
+    public GameObject chargingBar;
+    public Slider chargingSlider;
 
     //Colours
     private SpriteRenderer sr;
@@ -63,7 +66,10 @@ public class PlayerScript : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         lr.enabled = false;
 
-        attackTextCooldown.gameObject.SetActive(false);
+        chargingSlider.maxValue = chargeDuration;
+        chargingBar.SetActive(false);
+
+        attackTextCooldown.gameObject.SetActive(false); //Hide cooling down UI
         attackUICooldown.fillAmount = 0.0f;
     }
 
@@ -133,11 +139,15 @@ public class PlayerScript : MonoBehaviour
             chargeTimerActive = false;
             chargeTimer = 0;    //Reset charge timer
             sr.color = defaultColour;
+            StopCharging();
         }
 
         if (chargeTimerActive == true && isCharging == true)    //If charge timer active and player is charging
         {
             chargeTimer += Time.deltaTime;      //Add time passed to chargeTimer
+
+            chargingBar.SetActive(true); //Show charging UI
+            chargingSlider.value = chargeTimer;
             
             if (chargeTimer >= chargeDuration)  //If player successfully charges for charge duration
             {
@@ -145,6 +155,8 @@ public class PlayerScript : MonoBehaviour
                 {
                     charges++;      //Add a charge
                     chargeTimer = 0;    //Reset timer
+
+                    chargingSlider.value = chargeTimer;
                 }
             }
         }
@@ -166,8 +178,6 @@ public class PlayerScript : MonoBehaviour
             if (attackTimer > 0)
             { 
                 attackTimer -= Time.deltaTime;  //Decrease timer until it hits 0
-                attackTextCooldown.text = Mathf.RoundToInt(attackCooldownTimer).ToString();
-                attackUICooldown.fillAmount = attackCooldownTimer / attackCooldownDuration;
             }
 
             if (attackTimer <= 0)
@@ -184,6 +194,10 @@ public class PlayerScript : MonoBehaviour
             { 
                 attackCooldownTimer += Time.deltaTime;  //increase timer by time passed until duration is hit
                 sr.color = attackCooldownColor;
+
+                attackTextCooldown.gameObject.SetActive(true);
+                attackTextCooldown.text = Mathf.RoundToInt(attackCooldownDuration - attackCooldownTimer).ToString(); //Change text on cooldown UI
+                attackUICooldown.fillAmount = (attackCooldownDuration - attackCooldownTimer) / attackCooldownDuration; //adjust fill amount on cooldown UI
             }
 
             if (attackCooldownTimer >= attackCooldownDuration)
@@ -191,11 +205,14 @@ public class PlayerScript : MonoBehaviour
                 attackCooldownTimerActive = false;  //Turn off the cooldown boolean
                 attackCooldownTimer = 0;    //Reset timer
                 sr.color = defaultColour;
+
+                attackTextCooldown.gameObject.SetActive(false); //Hide cooling down UI
+                attackUICooldown.fillAmount = 0.0f;
             }
         }
         #endregion
 
-        text.text = charges.ToString();
+        numberOfChargeText.text = charges.ToString();
     }
 
     public void FixedUpdate()
@@ -215,5 +232,11 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = Vector3.zero;
         gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0,0,0);
         rb.freezeRotation = false;
+    }
+
+    public void StopCharging()
+    {
+        chargingSlider.value = 0;
+        chargingBar.SetActive(false);
     }
 }
