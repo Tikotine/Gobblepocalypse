@@ -58,12 +58,17 @@ public class PlayerScript : MonoBehaviour
     public Color attackCooldownColor;
     public Color defaultColour;
 
+    //Particles
+    public GameObject collisionParticlesObject;
+    private CollisionParticles cp;
+
     // Start is called before the first frame update
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();   //Reference the players rigidbody2D
         lr = gameObject.GetComponent<LineRenderer>();   //Reference the player's line renderer
         sr = GetComponent<SpriteRenderer>();
+        cp = collisionParticlesObject.GetComponent<CollisionParticles>();
         lr.enabled = false;
 
         chargingSlider.maxValue = chargeDuration;
@@ -120,7 +125,12 @@ public class PlayerScript : MonoBehaviour
         { 
             canShoot = false;
             chargeTimerActive = true;       //Toggle all booleans
-            sr.color = chargingColour;
+
+            if (isAttacking != true)
+            {
+                sr.color = chargingColour;
+            }
+
 
             if (isCharging == false)
             {
@@ -138,7 +148,12 @@ public class PlayerScript : MonoBehaviour
             isCharging = false;
             chargeTimerActive = false;
             chargeTimer = 0;    //Reset charge timer
-            sr.color = defaultColour;
+
+            if (isAttacking != true)
+            {
+                sr.color = defaultColour;
+            }
+
             StopCharging();
         }
 
@@ -218,6 +233,14 @@ public class PlayerScript : MonoBehaviour
     public void FixedUpdate()
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "SolidPlatform" || collision.gameObject.tag == "ColourPlatform")
+        {
+            cp.PlayParticles(collision);
+        }
     }
 
     public void ResetTimers()
