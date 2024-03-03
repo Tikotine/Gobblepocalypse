@@ -6776,7 +6776,7 @@ GameObject:
   - component: {fileID: 1059368010}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6821,6 +6821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 2026991850}
   cam: {fileID: 0}
+  solidSticky: {fileID: 1362695988}
+  changeSticky: {fileID: 1797217072}
 --- !u!50 &1059368011
 Rigidbody2D:
   serializedVersion: 4
@@ -8159,7 +8161,7 @@ GameObject:
   - component: {fileID: 1175139341}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

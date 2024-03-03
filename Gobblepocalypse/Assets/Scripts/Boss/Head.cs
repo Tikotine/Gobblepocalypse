@@ -11,9 +11,13 @@ public class Head : MonoBehaviour
     private CheckpointManager cm;
     private PlayerScript ps;
 
+    //Walls
+    public Sticky solidSticky;
+    public Sticky changeSticky;
+
     private void Start()
     {
-        boss = GetComponentInParent<Boss>();   
+        boss = GetComponentInParent<Boss>();
         cam = FindObjectOfType<Camera>();
         cm = FindObjectOfType<CheckpointManager>();
         ps = FindObjectOfType<PlayerScript>();
@@ -22,7 +26,7 @@ public class Head : MonoBehaviour
     private void FixedUpdate()
     {
         //always follow player yaxis
-        transform.position = Vector2.Lerp(transform.position, getCamYPos(), Time.deltaTime*4);
+        transform.position = Vector2.Lerp(transform.position, getCamYPos(), Time.deltaTime * 4);
     }
 
     private Vector2 getCamYPos()
@@ -48,6 +52,7 @@ public class Head : MonoBehaviour
             {
                 //if in preatk state false
                 Debug.Log("player hit by boss");
+                ResetStickyPlatforms();     //Unstick from platforms
                 cm.MoveToCheckpoint();      //Move Player to checkpoint
                 cm.RetryColelctablesReset();    //Reset Collectables
                 cm.BossCheckpointReset();   //Reset boss to last checkpoint
@@ -65,7 +70,7 @@ public class Head : MonoBehaviour
             case "BossCharge":
                 return true;
 
-            default: 
+            default:
                 return false;
         }
     }
@@ -80,5 +85,11 @@ public class Head : MonoBehaviour
             default:
                 return false;
         }
+    }
+
+    private void ResetStickyPlatforms()
+    {
+        solidSticky.isSticking = false;
+        changeSticky.isSticking = false;
     }
 }

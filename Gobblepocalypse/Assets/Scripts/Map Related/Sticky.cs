@@ -51,4 +51,5 @@ public class Sticky : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().freezeRotation = false;
         }
     }
+
 }
