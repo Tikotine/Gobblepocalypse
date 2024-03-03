@@ -100,16 +100,34 @@ public class Boss : MonoBehaviour
 
     public void throwPlayer()
     {
-        player.transform.position = new Vector2(player.transform.position.x, transform.position.y);
+        Head head = GetComponentInChildren<Head>();
+        player.transform.position = new Vector2(player.transform.position.x, head.transform.position.y);
         //sry i lazy aha
         player.GetComponent<Rigidbody2D>().velocity= Vector2.zero;
-        player.GetComponent<Rigidbody2D>().AddForce(cam.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
+        player.GetComponent<Rigidbody2D>().AddForce(head.transform.right * yeetForce, ForceMode2D.Impulse); //always yeet out to the right so
         thrownPlayer = true;
     }
 
     public void moveBack()
     {
-        transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x - moveBackDist, transform.position.y), Time.deltaTime);
+        StartCoroutine(LerpPosition(new Vector2(transform.position.x - moveBackDist, transform.position.y), 3));
+        //transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x - moveBackDist, transform.position.y), Time.deltaTime);
+        canMove = true;
+    }
+
+    IEnumerator LerpPosition(Vector2 targetPosition, float duration)
+    {
+        float time = 0;
+        Vector2 startPosition = transform.position;
+
+        while (time < duration)
+        {
+            transform.position = Vector2.Lerp(startPosition, targetPosition, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetPosition;
+        SetCurrentState(new BossChase(this));
     }
 
     #region ui

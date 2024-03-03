@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+//jme
 public class Head : MonoBehaviour
 {
     public Boss boss;
@@ -40,6 +40,10 @@ public class Head : MonoBehaviour
                 Debug.Log("player interrupted boss");
                 boss.SetCurrentState(new BossInterrupt(boss));
             }
+            else if (isBossInInterrupt(boss.currentState.ToString()))
+            {
+                Debug.Log("boss in interrupted state?");
+            }
             else
             {
                 //if in preatk state false
@@ -62,6 +66,18 @@ public class Head : MonoBehaviour
                 return true;
 
             default: 
+                return false;
+        }
+    }
+
+    private bool isBossInInterrupt(string stateName)
+    {
+        switch (stateName)
+        {
+            case "BossInterrupt":
+                return true;
+
+            default:
                 return false;
         }
     }
