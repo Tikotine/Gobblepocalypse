@@ -61,6 +61,7 @@ public class PlayerScript : MonoBehaviour
     //Particles
     public GameObject collisionParticlesObject;
     private CollisionParticles cp;
+    public GameObject chargeParticlesObject;
 
     // Start is called before the first frame update
     void Awake()
@@ -135,6 +136,7 @@ public class PlayerScript : MonoBehaviour
             if (isCharging == false)
             {
                 Debug.Log("Stopped");
+                chargeParticlesObject.GetComponent<ParticleSystem>().Play();
                 rb.velocity = Vector3.zero;     //Set velocity of player to 0
                 rb.AddForce(downwardForce, ForceMode2D.Impulse);
             }
@@ -262,5 +264,6 @@ public class PlayerScript : MonoBehaviour
     {
         chargingSlider.value = 0;
         chargingBar.SetActive(false);
+        chargeParticlesObject.GetComponent<ParticleSystem>().Stop();
     }
 }
