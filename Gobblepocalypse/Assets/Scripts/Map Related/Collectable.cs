@@ -23,17 +23,24 @@ public class Collectable : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            foreach (GameObject n in platformList)
-            {
-                ColourPlatforms cp = n.GetComponent<ColourPlatforms>();
-                cp.targetPoint -= timeRestored / cp.time;
-                if (cp.targetPoint < 0)
-                { 
-                    cp.targetPoint = 0;
-                }
-            }
+            CollectCollectable();
 
             Destroy(gameObject);
         }
+    }
+
+    private void CollectCollectable()
+    {
+        foreach (GameObject n in platformList)      //Increase the timer count for all platforms
+        {
+            ColourPlatforms cp = n.GetComponent<ColourPlatforms>();
+            cp.targetPoint -= timeRestored / cp.time;
+            if (cp.targetPoint < 0)
+            {
+                cp.targetPoint = 0;
+            }
+        }
+
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.collectableCollected, transform.position);   //Play sound at collectable location
     }
 }

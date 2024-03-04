@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{af7e8489-0ac0-46d3-abbb-5c971d42c249}">
+		<property name="assetPath">
+			<value>Test/Ambience/amb_evening_loop.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>6</value>
+		</property>
+		<property name="length">
+			<value>67.018562500000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0dc5f0bc-2b27-4bf0-ae94-0b824bf4ba0b}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -114,6 +114,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e32a1b326212e34783e9c37a4c83f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectableCollectedSound:
+    Guid:
+      Data1: -888998513
+      Data2: 1206513231
+      Data3: -1070980184
+      Data4: -833489555
+    Path: event:/CollectableCollected
   platformList:
   - {fileID: 0}
   - {fileID: 0}

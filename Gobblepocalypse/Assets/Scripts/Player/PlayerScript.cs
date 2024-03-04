@@ -1,14 +1,12 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using FMOD.Studio;
 
 public class PlayerScript : MonoBehaviour
 {
     //Values
+    [field: Header("Changable Values")]
     public float shootPower;
     public int maxCharges;
     public int charges;
@@ -16,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     private float chargeTimer;
 
     //Boolean Controls
+    [field: Header("Boolean Controls")]
     public bool canShoot = true;
     public bool isShooting = false;
     public bool isCharging = false;
@@ -23,35 +22,45 @@ public class PlayerScript : MonoBehaviour
     public bool isAttacking = false;
     public bool attackTimerActive = false;
     public bool attackCooldownTimerActive = false;
+    public bool groundContact => Physics2D.OverlapBox(feetCol.transform.position, feetCol.size, 0, groundLayers);
 
     //Vector Inputs
+    [field: Header("Vector Inputs")]
     public Vector3 mousePos;
     public Vector2 mouseDistance;
     public Vector3 downwardForce;
 
     //Player Refs
+    [field: Header("Player References")]
     private Rigidbody2D rb;
+    public BoxCollider2D feetCol;
+    public LayerMask groundLayers;
 
     //Line
+    [field: Header("Line References")]
     public LineRenderer lr;
 
     //Attacking
+    [field: Header("Player Attacking")]
     public float attackDuration;
     public float attackTimer;
     public float attackCooldownDuration;
     public float attackCooldownTimer;
 
     //Attack UI
+    [field: Header("Player Attacking UI")]
     public Image attackUICooldown;
     public TMP_Text attackTextCooldown;
 
     //Charging UI
+    [field: Header("Player Charging UI")]
     //public TextMeshProUGUI text;
     public TMP_Text numberOfChargeText;
     public GameObject chargingBar;
     public Slider chargingSlider;
 
     //Colours
+    [field: Header("Colours")]
     private SpriteRenderer sr;
     public Color chargingColour;
     public Color attackingColour;
@@ -59,9 +68,14 @@ public class PlayerScript : MonoBehaviour
     public Color defaultColour;
 
     //Particles
+    [field: Header("Particles")]
     public GameObject collisionParticlesObject;
     private CollisionParticles cp;
     public GameObject chargeParticlesObject;
+
+    //Audio
+    [field: Header("Player Audio")]
+    private EventInstance playerRoll;
 
     // Start is called before the first frame update
     void Awake()
@@ -79,6 +93,10 @@ public class PlayerScript : MonoBehaviour
         attackUICooldown.fillAmount = 0.0f;
     }
 
+    private void Start()
+    {
+        playerRoll = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerRoll);     //Initalize instance for roll audio
+    }
 
     // Update is called once per frame
     void Update()
@@ -119,7 +137,10 @@ public class PlayerScript : MonoBehaviour
             charges--;  //use a charge
             isShooting = false;
         }
+
         #endregion
+
+        UpdateSound();
 
         #region Charging
         if (Input.GetKey(KeyCode.Mouse1) && !isShooting)    //On right mouse hold
@@ -265,5 +286,26 @@ public class PlayerScript : MonoBehaviour
         chargingSlider.value = 0;
         chargingBar.SetActive(false);
         chargeParticlesObject.GetComponent<ParticleSystem>().Stop();
+    }
+
+    private void UpdateSound()
+    {
+        //Start footsteps event if player has a velocity and is on the ground
+        if ((rb.velocity.x > 1 || rb.velocity.x < -1) && groundContact)
+        {
+            //Get the playback state, we dont want it to play if it is already playing
+            PLAYBACK_STATE playbackState;
+            playerRoll.getPlaybackState(out playbackState);
+
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))   //If playback is currently stopped, play it
+            {
+                playerRoll.start();
+            }
+
+            else    //Else stop playback
+            {
+                playerRoll.stop(STOP_MODE.ALLOWFADEOUT);
+            }
+        }
     }
 }
