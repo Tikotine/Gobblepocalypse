@@ -11,10 +11,15 @@ public class MainMenuManager : MonoBehaviour
     public GameObject quitButtonsPrefab;
     public GameObject settingsMenu;
 
+    [Header("Player")]
+    public GameObject player;
+    public PlayerScript playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
+        playerScript = player.GetComponent<PlayerScript>();
     }
 
     // Update is called once per frame
@@ -41,5 +46,18 @@ public class MainMenuManager : MonoBehaviour
     public void ActivateSettingsMenu()
     {
         settingsMenu.SetActive(true);
+    }
+
+    public void TogglePlayerScript()
+    {
+        if (playerScript.enabled)
+        {
+            playerScript.enabled = false;
+        }
+
+        else
+        {
+            playerScript.enabled = true;
+        }
     }
 }

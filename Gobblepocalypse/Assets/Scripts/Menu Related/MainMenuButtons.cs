@@ -22,6 +22,8 @@ public class MainMenuButtons : MonoBehaviour
     public float maxPushForce, minPushForce;
     public Vector2 pushForce;
 
+    public GameObject player;
+    public PlayerScript playerScript;
     public GameObject[] menuButtons;
     public GameObject mainMenuManagerObject;
     private MainMenuManager mainMenuManagerScript;
@@ -33,6 +35,8 @@ public class MainMenuButtons : MonoBehaviour
         pushForce = new Vector2 (Random.Range(minPushForce, maxPushForce), Random.Range(minPushForce, maxPushForce));
         mainMenuManagerObject = GameObject.FindWithTag("MainMenuManager");
         mainMenuManagerScript = mainMenuManagerObject.GetComponent<MainMenuManager>();
+        player = GameObject.FindWithTag("Player");
+        playerScript = player.GetComponent<PlayerScript>();
 
     }
 
@@ -44,7 +48,7 @@ public class MainMenuButtons : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && playerScript.isAttacking)
         {
             PlayButton(buttonType);
         }
@@ -81,6 +85,7 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.SETTINGS:
                 Debug.Log("SETTINGS");
                 RemoveMenu();
+                mainMenuManagerScript.TogglePlayerScript();
                 mainMenuManagerScript.ActivateSettingsMenu();
                 break;
 
