@@ -1,16 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
+[RequireComponent(typeof(StudioEventEmitter))]      //Require a studioeventemitter
 public class Collectable : MonoBehaviour
 {
     public GameObject[] platformList;
     public float timeRestored;
 
+    //Audio/FMOD
+    private StudioEventEmitter emitter;
+
     // Start is called before the first frame update
     void Awake()
     {
         platformList = GameObject.FindGameObjectsWithTag("ColourPlatform");
+    }
+
+    private void Start()
+    {
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.collectableIdle, gameObject);    //Initialise the collectableIdle event at this gameobject
+        emitter.Play();     //Start playing the audio
     }
 
     // Update is called once per frame
@@ -41,6 +52,7 @@ public class Collectable : MonoBehaviour
             }
         }
 
+        emitter.Stop();     //Stop the idle emitter
         AudioManager.instance.PlayOneShot(FMODEvents.instance.collectableCollected, transform.position);   //Play sound at collectable location
     }
 }

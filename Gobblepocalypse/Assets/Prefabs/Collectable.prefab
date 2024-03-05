@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6121460155298653257}
   - component: {fileID: 6121460155298653258}
   - component: {fileID: 6121460155298653259}
+  - component: {fileID: 567346050798322036}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -114,15 +115,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e32a1b326212e34783e9c37a4c83f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableCollectedSound:
-    Guid:
-      Data1: -888998513
-      Data2: 1206513231
-      Data3: -1070980184
-      Data4: -833489555
-    Path: event:/CollectableCollected
   platformList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   timeRestored: 5
+--- !u!114 &567346050798322036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121460155298653260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -197232756
+      Data2: 1293538344
+      Data3: -1341052024
+      Data4: 1337554537
+    Path: event:/SFX/Collectable/CollectableIdle
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10

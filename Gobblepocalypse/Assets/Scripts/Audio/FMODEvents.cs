@@ -7,11 +7,18 @@ public class FMODEvents : MonoBehaviour
 {
     public static FMODEvents instance { get; private set; }
 
+    [field: Header("Ambience")]
+    [field: SerializeField] public EventReference ambience1 { get; private set; }
+
+    [field: Header("Music")]
+    [field: SerializeField] public EventReference BGM1 { get; private set; }
+
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerRoll { get; private set; }
 
     [field: Header("Collectable SFX")]
     [field: SerializeField] public EventReference collectableCollected { get; private set; }
+    [field: SerializeField] public EventReference collectableIdle { get; private set; }
 
     private void Awake()
     {

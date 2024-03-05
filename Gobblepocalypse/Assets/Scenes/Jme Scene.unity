@@ -277,20 +277,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7cf32e1576e640bf1d0b0af7d69e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ambience1>k__BackingField:
+    Guid:
+      Data1: 445495073
+      Data2: 1163163208
+      Data3: 147829391
+      Data4: 2094312797
+    Path: event:/Ambience/Ambience1
+  <BGM1>k__BackingField:
+    Guid:
+      Data1: -2119463757
+      Data2: 1324180474
+      Data3: -599521607
+      Data4: -413305597
+    Path: event:/BGM/Level1Music
   <playerRoll>k__BackingField:
     Guid:
       Data1: -1058629285
       Data2: 1300613171
       Data3: -640612190
       Data4: 678635190
-    Path: event:/BallRolling
+    Path: event:/SFX/Player/BallRolling
   <collectableCollected>k__BackingField:
     Guid:
       Data1: -888998513
       Data2: 1206513231
       Data3: -1070980184
       Data4: -833489555
-    Path: event:/CollectableCollected
+    Path: event:/SFX/Collectable/CollectableCollected
+  <collectableIdle>k__BackingField:
+    Guid:
+      Data1: -197232756
+      Data2: 1293538344
+      Data3: -1341052024
+      Data4: 1337554537
+    Path: event:/SFX/Collectable/CollectableIdle
 --- !u!1 &190803791
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,6 +6332,7 @@ GameObject:
   - component: {fileID: 828246747}
   - component: {fileID: 828246746}
   - component: {fileID: 828246745}
+  - component: {fileID: 828246749}
   m_Layer: 0
   m_Name: Collectable (1)
   m_TagString: Untagged
@@ -6418,6 +6440,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828246749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828246744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &831246481
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,6 +6514,7 @@ GameObject:
   - component: {fileID: 832140867}
   - component: {fileID: 832140866}
   - component: {fileID: 832140865}
+  - component: {fileID: 832140869}
   m_Layer: 0
   m_Name: Collectable (2)
   m_TagString: Untagged
@@ -6568,6 +6622,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832140869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832140864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &836779736
 GameObject:
   m_ObjectHideFlags: 0
@@ -8453,6 +8538,7 @@ GameObject:
   - component: {fileID: 1180112123}
   - component: {fileID: 1180112122}
   - component: {fileID: 1180112121}
+  - component: {fileID: 1180112125}
   m_Layer: 0
   m_Name: Collectable (3)
   m_TagString: Untagged
@@ -8560,6 +8646,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180112125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180112120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &1216744983
 GameObject:
   m_ObjectHideFlags: 0
@@ -75110,6 +75227,7 @@ GameObject:
   - component: {fileID: 2099225658}
   - component: {fileID: 2099225657}
   - component: {fileID: 2099225656}
+  - component: {fileID: 2099225660}
   m_Layer: 0
   m_Name: Collectable (4)
   m_TagString: Untagged
@@ -75217,6 +75335,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099225660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099225655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &2104393276
 GameObject:
   m_ObjectHideFlags: 0
