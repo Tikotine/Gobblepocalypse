@@ -8,6 +8,8 @@ TagManager:
   - ColourPlatform
   - Boss
   - SolidPlatform
+  - MainMenuSettings
+  - MainMenuManager
   layers:
   - Default
   - TransparentFX
