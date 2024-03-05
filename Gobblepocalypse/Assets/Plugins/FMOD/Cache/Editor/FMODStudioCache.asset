@@ -70,10 +70,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Level1.bank
   Name: Level1
   StudioPath: bank:/Level1
-  lastModified: 638452329208740759
+  lastModified: 638452348196995814
   FileSizes:
   - Name: Desktop
-    Value: 4098272
+    Value: 4879616
   Exists: 1
 --- !u!114 &-2284348326686410475
 MonoBehaviour:
@@ -117,7 +117,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638452298928514268
+  lastModified: 638452348196540865
   FileSizes:
   - Name: Desktop
     Value: 53536
@@ -150,7 +150,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638452329208740759
+  cacheTime: 638452348196995814
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -167,10 +167,36 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638452329191125755
+  lastModified: 638452348196203598
   FileSizes:
   - Name: Desktop
-    Value: 1144
+    Value: 1298
+  Exists: 1
+--- !u!114 &2632057007178685456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level1Music/Area
+  m_EditorClassIdentifier: 
+  Name: Area
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2267047097
+    data2: 2013697285
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Area1
+  - Area2
   Exists: 1
 --- !u!114 &3965167403999087247
 MonoBehaviour:
@@ -211,10 +237,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638452329191115737
+  lastModified: 638452348196181344
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1486
   Exists: 1
 --- !u!114 &8200349872784336060
 MonoBehaviour:
@@ -239,10 +265,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2632057007178685456}
   MinDistance: 1
   MaxDistance: 20
-  Length: 56888
+  Length: 0
 --- !u!114 &8206107619199630454
 MonoBehaviour:
   m_ObjectHideFlags: 0

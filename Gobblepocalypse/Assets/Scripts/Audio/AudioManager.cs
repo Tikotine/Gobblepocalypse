@@ -8,6 +8,23 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
 
+    //Slider Variables
+    [Header("Volume")]
+    [Range(0,1f)]
+    public float masterVolume = 1f;
+    [Range(0, 1f)]
+    public float musicVolume = 1f;
+    [Range(0, 1f)]
+    public float ambienceVolume = 1f;
+    [Range(0, 1f)]
+    public float SFXVolume = 1f;
+
+    //Bus variables
+    private Bus masterBus;
+    private Bus musicBus;
+    private Bus ambienceBus;
+    private Bus SFXBus;
+
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
@@ -25,12 +42,30 @@ public class AudioManager : MonoBehaviour
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
+
+        #region Initalize Busses
+        //Initalize busses
+        masterBus = RuntimeManager.GetBus("bus:/");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
+        SFXBus = RuntimeManager.GetBus("bus:/SFX");
+        #endregion
     }
 
     private void Start()
     {
         InitializeAmbience(FMODEvents.instance.ambience1);      //Play ambience on start
         InitializeMusic(FMODEvents.instance.BGM1);      //Play BGM on start
+    }
+
+    private void Update()
+    {
+        #region Update Volume Sliders
+        masterBus.setVolume(masterVolume);
+        musicBus.setVolume(musicVolume);
+        ambienceBus.setVolume(ambienceVolume);
+        SFXBus.setVolume(SFXVolume);
+        #endregion
     }
 
     private void InitializeMusic(EventReference musicEventReference)
@@ -45,10 +80,16 @@ public class AudioManager : MonoBehaviour
         ambienceEventInstance.start();      
     }
 
-    //Call this method in another script to change the ambience intensity
+    //Call this method if you want to change the ambience intensity
     public void SetAmbienceParameter(string parameterName, float parameterValue)       //A method to set the parameter value. Intakes the parameter name and value to set
     { 
         ambienceEventInstance.setParameterByName(parameterName, parameterValue);        //Set the parameter value based on input
+    }
+
+    //Call this method if you want to change the music by area in a level
+    public void SetMusicArea(MusicArea inputArea)    //Set the music area based off the enum MusicArea
+    {
+        musicEventInstance.setParameterByName("Area", (float)inputArea);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
