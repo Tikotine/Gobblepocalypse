@@ -69,7 +69,7 @@ public class MainMenuButtons : MonoBehaviour
 
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
-                StartCoroutine(DoTransition("Jme Scene"));
+                StartCoroutine(DoTransition("Jme Scene", MusicControl.LEVEL1));
                 break;
 
             case ButtonType.LEVEL2:
@@ -156,10 +156,11 @@ public class MainMenuButtons : MonoBehaviour
 
     #endregion
 
-    IEnumerator DoTransition(string sceneName)
+    IEnumerator DoTransition(string sceneName, MusicControl mc)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(sceneName);
+        AudioManager.SetMusicControl(mc);
+        SceneManager.LoadScene(sceneName);     
     }
 }

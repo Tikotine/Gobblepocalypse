@@ -1,152 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6419228363917339011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Ambience1
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Ambience1
-  Guid:
-    Data1: 445495073
-    Data2: 1163163208
-    Data3: 147829391
-    Data4: 2094312797
-  Banks:
-  - {fileID: -2982734221126614050}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4102557450354936625}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 67018
---- !u!114 &-2982734221126614050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Level1.bank
-  m_EditorClassIdentifier: 
-  Path: GobblepocalypseAudioSystem/Build/Desktop/Level1.bank
-  Name: Level1
-  StudioPath: bank:/Level1
-  lastModified: 638452348196995814
-  FileSizes:
-  - Name: Desktop
-    Value: 4879616
-  Exists: 1
---- !u!114 &-972065946555918996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638452348196540865
-  FileSizes:
-  - Name: Desktop
-    Value: 53536
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 589352567422326176}
-  - {fileID: 6452087251598316505}
-  - {fileID: -972065946555918996}
-  - {fileID: -2982734221126614050}
-  EditorEvents:
-  - {fileID: -6419228363917339011}
-  - {fileID: 1889582641367393893}
-  - {fileID: 2733017680779418376}
-  - {fileID: 2869474718454389233}
-  - {fileID: 7296698558316375932}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 6452087251598316505}
-  StringsBanks:
-  - {fileID: 589352567422326176}
-  cacheTime: 638452348196995814
-  cacheVersion: 131616
---- !u!114 &589352567422326176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638452348196203598
-  FileSizes:
-  - Name: Desktop
-    Value: 1298
-  Exists: 1
---- !u!114 &1889582641367393893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM/Level1Music
-  m_EditorClassIdentifier: 
-  Path: event:/BGM/Level1Music
-  Guid:
-    Data1: -2119463757
-    Data2: 1324180474
-    Data3: -599521607
-    Data4: -413305597
-  Banks:
-  - {fileID: -2982734221126614050}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3952037382663252846}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2733017680779418376
+--- !u!114 &-7863694437374645269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
---- !u!114 &2869474718454389233
+--- !u!114 &-6481041175918926939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicControl/MusicControl
+  m_EditorClassIdentifier: 
+  Name: MusicControl
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2677693492
+    data2: 4143037301
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - MAIN
+  - LEVEL1
+  Exists: 1
+--- !u!114 &-5400047657399793780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,74 +63,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Collectable/CollectableIdle
+  m_Name: event:/BGM/MusicControl
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Collectable/CollectableIdle
+  Path: event:/BGM/MusicControl
   Guid:
-    Data1: -197232756
-    Data2: 1293538344
-    Data3: -1341052024
-    Data4: 1337554537
+    Data1: -1211580846
+    Data2: 1335593336
+    Data3: 1020367239
+    Data4: -1888489854
   Banks:
-  - {fileID: -972065946555918996}
-  IsStream: 0
-  Is3D: 1
+  - {fileID: 7485859958633798809}
+  IsStream: 1
+  Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 3718036260096964048}
+  - {fileID: -6481041175918926939}
   MinDistance: 1
   MaxDistance: 20
-  Length: 6416
---- !u!114 &3952037382663252846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level1Music/Area
-  m_EditorClassIdentifier: 
-  Name: Area
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2267047097
-    data2: 2013697285
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Area1
-  - Area2
-  Exists: 1
---- !u!114 &4102557450354936625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ambience1/Ambience_Intensity
-  m_EditorClassIdentifier: 
-  Name: Ambience_Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 862427263
-    data2: 138855093
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &6452087251598316505
+  Length: 0
+--- !u!114 &-4516376520249285288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,17 +92,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Level1.bank
   m_EditorClassIdentifier: 
-  Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638452348196181344
+  Path: GobblepocalypseAudioSystem/Build/Desktop/Level1.bank
+  Name: Level1
+  StudioPath: bank:/Level1
+  lastModified: 638453683474260711
   FileSizes:
   - Name: Desktop
-    Value: 1486
+    Value: 3338464
   Exists: 1
---- !u!114 &7296698558316375932
+--- !u!114 &-3768758195923011085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,3 +129,247 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-972065946555918996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638453641075502246
+  FileSizes:
+  - Name: Desktop
+    Value: 53536
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 589352567422326176}
+  - {fileID: 6452087251598316505}
+  - {fileID: -972065946555918996}
+  - {fileID: -4516376520249285288}
+  - {fileID: 7485859958633798809}
+  EditorEvents:
+  - {fileID: 6357964822921060118}
+  - {fileID: 5785522210257475664}
+  - {fileID: -7863694437374645269}
+  - {fileID: 4873485969704544237}
+  - {fileID: -3768758195923011085}
+  - {fileID: -5400047657399793780}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 6452087251598316505}
+  StringsBanks:
+  - {fileID: 589352567422326176}
+  cacheTime: 638453683474511377
+  cacheVersion: 131616
+--- !u!114 &589352567422326176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638453683474300714
+  FileSizes:
+  - Name: Desktop
+    Value: 1456
+  Exists: 1
+--- !u!114 &3718036260096964048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicControl/Area
+  m_EditorClassIdentifier: 
+  Name: Area
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2267047097
+    data2: 2013697285
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Area1
+  - Area2
+  Exists: 1
+--- !u!114 &4873485969704544237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Collectable/CollectableIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Collectable/CollectableIdle
+  Guid:
+    Data1: -197232756
+    Data2: 1293538344
+    Data3: -1341052024
+    Data4: 1337554537
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6416
+--- !u!114 &5785522210257475664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/MainMenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/MainMenuMusic
+  Guid:
+    Data1: -2078036106
+    Data2: 1090691983
+    Data3: 662314913
+    Data4: 216755356
+  Banks:
+  - {fileID: 7485859958633798809}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 29538
+--- !u!114 &6357964822921060118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience1
+  Guid:
+    Data1: 445495073
+    Data2: 1163163208
+    Data3: 147829391
+    Data4: 2094312797
+  Banks:
+  - {fileID: -4516376520249285288}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8785933245543473791}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 67018
+--- !u!114 &6452087251598316505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638453683474290702
+  FileSizes:
+  - Name: Desktop
+    Value: 1486
+  Exists: 1
+--- !u!114 &7485859958633798809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: GobblepocalypseAudioSystem/Build/Desktop/Menu.bank
+  Name: Menu
+  StudioPath: bank:/Menu
+  lastModified: 638453683474511377
+  FileSizes:
+  - Name: Desktop
+    Value: 1900000
+  Exists: 1
+--- !u!114 &8785933245543473791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience1/Ambience_Intensity
+  m_EditorClassIdentifier: 
+  Name: Ambience_Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 862427263
+    data2: 138855093
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

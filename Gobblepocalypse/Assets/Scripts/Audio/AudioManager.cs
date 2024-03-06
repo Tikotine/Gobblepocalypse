@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System;
+
+public enum MusicControl
+{
+    MENU = 0,
+    LEVEL1 = 1
+}
 
 public class AudioManager : MonoBehaviour
 {
@@ -25,20 +32,26 @@ public class AudioManager : MonoBehaviour
     private Bus ambienceBus;
     private Bus SFXBus;
 
-    private List<EventInstance> eventInstances;
+    public List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
     private EventInstance ambienceEventInstance;
-    private EventInstance musicEventInstance;
+    public static EventInstance musicEventInstance;
 
     private void Awake()
     {
         if (instance == null)
         {
             Debug.LogError("Found more than one Audio Manager in the scene.");
+            DontDestroyOnLoad(gameObject);
+            instance = this;
         }
 
-        instance = this;
+        else
+        {
+            Destroy(gameObject);
+        }
+
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
@@ -54,8 +67,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeAmbience(FMODEvents.instance.ambience1);      //Play ambience on start
-        InitializeMusic(FMODEvents.instance.BGM1);      //Play BGM on start
+        //InitializeAmbience(FMODEvents.instance.ambience1);      //Play ambience on start
+        InitializeMusic(FMODEvents.instance.BGMControl);      //Play BGM on start
     }
 
     private void Update()
@@ -66,9 +79,10 @@ public class AudioManager : MonoBehaviour
         ambienceBus.setVolume(ambienceVolume);
         SFXBus.setVolume(SFXVolume);
         #endregion
+
     }
 
-    private void InitializeMusic(EventReference musicEventReference)
+    public void InitializeMusic(EventReference musicEventReference)
     { 
         musicEventInstance = CreateEventInstance(musicEventReference);
         musicEventInstance.start();
@@ -129,6 +143,13 @@ public class AudioManager : MonoBehaviour
 
     private void OnDestroy()    //On scene change etc
     {
+
         CleanUp();
+    }
+    
+    //Use this to change the parameter/music
+    public static void SetMusicControl(MusicControl parameter)
+    {
+        musicEventInstance.setParameterByName("MusicControl", (float)parameter);
     }
 }

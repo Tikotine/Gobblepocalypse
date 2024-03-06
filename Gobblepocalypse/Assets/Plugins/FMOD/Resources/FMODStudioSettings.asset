@@ -488,6 +488,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Level1
+  - Menu
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
