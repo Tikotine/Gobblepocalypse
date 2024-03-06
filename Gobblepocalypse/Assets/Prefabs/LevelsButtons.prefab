@@ -481,12 +481,16 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 3737109379669452712}
   - {fileID: 3737109379971476890}
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
+  transition: {fileID: 0}
+  transitionTime: 0
 --- !u!1 &3737109379123369909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,12 +1215,16 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 3737109379669452712}
   - {fileID: 3737109379971476890}
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &3737109379757714010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,12 +1403,16 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 3737109379669452712}
   - {fileID: 3737109379971476890}
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &3737109380084817813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,12 +1591,16 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 3737109379669452712}
   - {fileID: 3737109379971476890}
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &3737109380502501671
 GameObject:
   m_ObjectHideFlags: 0

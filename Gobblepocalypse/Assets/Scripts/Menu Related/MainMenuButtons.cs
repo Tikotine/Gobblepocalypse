@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
@@ -27,7 +29,8 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject[] menuButtons;
     public GameObject mainMenuManagerObject;
     private MainMenuManager mainMenuManagerScript;
-    
+    public Animator transition;
+    public float transitionTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +40,7 @@ public class MainMenuButtons : MonoBehaviour
         mainMenuManagerScript = mainMenuManagerObject.GetComponent<MainMenuManager>();
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerScript>();
-
+        transition = FindObjectOfType<Animator>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class MainMenuButtons : MonoBehaviour
 
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
+                StartCoroutine(DoTransition("Jme Scene"));
                 break;
 
             case ButtonType.LEVEL2:
@@ -152,4 +156,10 @@ public class MainMenuButtons : MonoBehaviour
 
     #endregion
 
+    IEnumerator DoTransition(string sceneName)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneName);
+    }
 }
