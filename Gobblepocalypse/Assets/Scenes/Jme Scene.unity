@@ -9545,6 +9545,7 @@ MonoBehaviour:
   attackTimer: 0
   attackCooldownDuration: 3
   attackCooldownTimer: 0
+  attackButton: {fileID: 1129597838}
   attackUICooldown: {fileID: 418743601}
   attackTextCooldown: {fileID: 679195467}
   numberOfChargeText: {fileID: 1727570028}
@@ -9552,8 +9553,9 @@ MonoBehaviour:
   chargingSlider: {fileID: 1006901221}
   chargingColour: {r: 0, g: 0.7058824, b: 0.9529412, a: 1}
   attackingColour: {r: 1, g: 0, b: 0, a: 1}
-  attackCooldownColor: {r: 0.3584906, g: 0, b: 0, a: 1}
+  attackCooldownColor: {r: 0.254717, g: 0.14588337, b: 0, a: 1}
   defaultColour: {r: 1, g: 1, b: 1, a: 1}
+  buttonDefaultColour: {r: 0.8705883, g: 0.5019608, b: 0, a: 1}
   collisionParticlesObject: {fileID: 1415901549577536973, guid: 24858a65ddd256247855d451c09ffa88, type: 3}
   chargeParticlesObject: {fileID: 226905761}
 --- !u!120 &1090569375
@@ -12935,7 +12937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.17626214, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.33333337, g: 0.8402066, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour
 
     //Attack UI
     [field: Header("Player Attacking UI")]
+    public Image attackButton;
     public Image attackUICooldown;
     public TMP_Text attackTextCooldown;
 
@@ -66,6 +67,7 @@ public class PlayerScript : MonoBehaviour
     public Color attackingColour;
     public Color attackCooldownColor;
     public Color defaultColour;
+    public Color buttonDefaultColour;
 
     //Particles
     [field: Header("Particles")]
@@ -209,6 +211,8 @@ public class PlayerScript : MonoBehaviour
             attackTimer = attackDuration;   //Set the timer to its duration
             attackTimerActive = true;       //Begin the attack timer countdown
             sr.color = attackingColour; //Change colour here
+
+            attackButton.color = attackingColour;
         }
 
         if (attackTimerActive == true && isAttacking == true)   //If the attack timer is on
@@ -223,6 +227,8 @@ public class PlayerScript : MonoBehaviour
                 isAttacking = false; //turn off attack mode
                 attackTimerActive = false;  //Stop the countdown and activate the cooldown
                 attackCooldownTimerActive = true;
+
+                attackButton.color = buttonDefaultColour;
             }
         }
 
