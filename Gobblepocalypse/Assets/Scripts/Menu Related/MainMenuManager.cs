@@ -30,16 +30,19 @@ public class MainMenuManager : MonoBehaviour
     public void SpawnMainMenu()
     { 
         Instantiate(mainMenuButtonsPrefab);
+        StarManager.instance.RemoveStars();
     }
 
     public void SpawnLevelMenu()
     {
         Instantiate(levelButtonsPrefab);
+        StarManager.instance.UpdateStars();
     }
 
     public void SpawnQuitMenu()
     {
         Instantiate(quitButtonsPrefab);
+        StarManager.instance.RemoveStars();
     }
 
     public void ActivateSettingsMenu()
