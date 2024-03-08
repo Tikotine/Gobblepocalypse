@@ -63,31 +63,37 @@ public class MainMenuButtons : MonoBehaviour
         {
             case ButtonType.PLAY:
                 Debug.Log("PLAY");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 RemoveMenu();
                 Invoke("InvokeSpawnLevelMenu", 2f);
                 break;
 
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 StartCoroutine(DoTransition("Jme Scene", MusicControl.LEVEL1));
                 break;
 
             case ButtonType.LEVEL2:
                 Debug.Log("Load LEVEL 2");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 break;
 
             case ButtonType.LEVEL3:
                 Debug.Log("Load LEVEL 3");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 break;
 
             case ButtonType.PLAYBACK:
                 Debug.Log("PLAY BACK");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 RemoveMenu();
                 Invoke("InvokeSpawnMainMenu", 2f);
                 break;
 
             case ButtonType.SETTINGS:
                 Debug.Log("SETTINGS");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 RemoveMenu();
                 mainMenuManagerScript.TogglePlayerScript();
                 mainMenuManagerScript.ActivateSettingsMenu();
@@ -95,16 +101,19 @@ public class MainMenuButtons : MonoBehaviour
 
             case ButtonType.QUIT:
                 Debug.Log("QUIT");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 RemoveMenu();
                 Invoke("InvokeSpawnQuitMenu", 2f);
                 break;
 
             case ButtonType.YES:
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 Debug.Log("YES");
                 //Quit Game
                 break;
 
             case ButtonType.NO:
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 Debug.Log("NO");
                 RemoveMenu();
                 Invoke("InvokeSpawnMainMenu", 2f);

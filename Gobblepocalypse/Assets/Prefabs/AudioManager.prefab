@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1390198260198700142
+--- !u!1 &6119764833112885082
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1390198260198700143}
-  - component: {fileID: 1390198260198700048}
+  - component: {fileID: 6119764833112885092}
+  - component: {fileID: 6119764833112885093}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,29 +17,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1390198260198700143
+--- !u!4 &6119764833112885092
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390198260198700142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 6119764833112885082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1390198260974520174}
-  m_Father: {fileID: 1390198260430230421}
+  - {fileID: 6119764834014176435}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390198260198700048
+--- !u!114 &6119764833112885093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390198260198700142}
+  m_GameObject: {fileID: 6119764833112885082}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c8d50ee19ea4d45ac4f810b436276a, type: 3}
@@ -49,7 +49,7 @@ MonoBehaviour:
   musicVolume: 1
   ambienceVolume: 1
   SFXVolume: 1
---- !u!1 &1390198260430230420
+--- !u!1 &6119764834014176432
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,40 +57,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1390198260430230421}
-  m_Layer: 0
-  m_Name: Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1390198260430230421
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390198260430230420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1390198260198700143}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1390198260974520173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1390198260974520174}
-  - component: {fileID: 1390198260974520175}
+  - component: {fileID: 6119764834014176435}
+  - component: {fileID: 6119764834014176434}
   m_Layer: 0
   m_Name: FMODEvents
   m_TagString: Untagged
@@ -98,28 +66,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1390198260974520174
+--- !u!4 &6119764834014176435
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390198260974520173}
+  m_GameObject: {fileID: 6119764834014176432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1390198260198700143}
+  m_Father: {fileID: 6119764833112885092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390198260974520175
+--- !u!114 &6119764834014176434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390198260974520173}
+  m_GameObject: {fileID: 6119764834014176432}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ff7cf32e1576e640bf1d0b0af7d69e9, type: 3}
@@ -139,6 +107,13 @@ MonoBehaviour:
       Data3: 1020367239
       Data4: -1888489854
     Path: event:/BGM/MusicControl
+  <buttonPress>k__BackingField:
+    Guid:
+      Data1: 317643668
+      Data2: 1255605659
+      Data3: 812565149
+      Data4: 2098914898
+    Path: event:/SFX/Button/ButtonPress
   <playerRoll>k__BackingField:
     Guid:
       Data1: -1058629285
@@ -160,3 +135,17 @@ MonoBehaviour:
       Data3: -1341052024
       Data4: 1337554537
     Path: event:/SFX/Collectable/CollectableIdle
+  <starCollected>k__BackingField:
+    Guid:
+      Data1: 638075079
+      Data2: 1279699543
+      Data3: -1750539845
+      Data4: 2045322085
+    Path: event:/SFX/Star/StarCollected
+  <starIdle>k__BackingField:
+    Guid:
+      Data1: 522904088
+      Data2: 1315649968
+      Data3: -1659094883
+      Data4: -2074021917
+    Path: event:/SFX/Star/StarIdle

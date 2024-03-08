@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-7081934239635219102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Button/ButtonPress
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Button/ButtonPress
+  Guid:
+    Data1: 317643668
+    Data2: 1255605659
+    Data3: 812565149
+    Data4: 2098914898
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6481041175918926939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +156,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2741969756208432889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Star/StarIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Star/StarIdle
+  Guid:
+    Data1: 522904088
+    Data2: 1315649968
+    Data3: -1659094883
+    Data4: -2074021917
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1846
 --- !u!114 &-972065946555918996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +198,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638453641075502246
+  lastModified: 638455086852682417
   FileSizes:
   - Name: Desktop
-    Value: 53536
+    Value: 99616
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -174,12 +228,15 @@ MonoBehaviour:
   - {fileID: 4873485969704544237}
   - {fileID: -3768758195923011085}
   - {fileID: -5400047657399793780}
+  - {fileID: -2741969756208432889}
+  - {fileID: 1966827379323627750}
+  - {fileID: -7081934239635219102}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638453683474511377
+  cacheTime: 638455086852682417
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -196,11 +253,38 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638453683474300714
+  lastModified: 638455086851975824
   FileSizes:
   - Name: Desktop
-    Value: 1456
+    Value: 1600
   Exists: 1
+--- !u!114 &1966827379323627750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Star/StarCollected
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Star/StarCollected
+  Guid:
+    Data1: 638075079
+    Data2: 1279699543
+    Data3: -1750539845
+    Data4: 2045322085
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3718036260096964048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +408,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638453683474290702
+  lastModified: 638455086851965743
   FileSizes:
   - Name: Desktop
     Value: 1486

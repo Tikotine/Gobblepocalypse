@@ -62,4 +62,9 @@ public class MainMenuManager : MonoBehaviour
             playerScript.enabled = true;
         }
     }
+
+    public void PlayButtonSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+    }
 }

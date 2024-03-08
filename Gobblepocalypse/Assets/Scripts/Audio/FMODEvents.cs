@@ -13,12 +13,19 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Music")]
     [field: SerializeField] public EventReference BGMControl { get; private set; }
 
+    [field: Header("Button SFX")]
+    [field: SerializeField] public EventReference buttonPress { get; private set; }
+
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerRoll { get; private set; }
 
     [field: Header("Collectable SFX")]
     [field: SerializeField] public EventReference collectableCollected { get; private set; }
     [field: SerializeField] public EventReference collectableIdle { get; private set; }
+
+    [field: Header("Star SFX")]
+    [field: SerializeField] public EventReference starCollected { get; private set; }
+    [field: SerializeField] public EventReference starIdle { get; private set; }
 
     private void Awake()
     {

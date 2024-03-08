@@ -1,6 +1,8 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public enum StarNumber
 { 
@@ -25,13 +27,25 @@ public class Star : MonoBehaviour
     [Header("Sprites")]
     public Sprite[] starSprites;
 
+    //Audio/FMOD
+    [Header("FMOD")]
+    private StudioEventEmitter emitter;
+
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        sm = GameObject.FindWithTag("StarManager").GetComponent<StarManager>();     //This line make it so u have to run game from main menu :/
+
         InitializeSprites();
-        sm = GameObject.FindWithTag("StarManager").GetComponent<StarManager>();
+
+        #region Audio
+        Debug.Log("Audio Initialiszing");
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.starIdle, gameObject);    //Initialise the collectableIdle event at this gameobject
+        emitter.Play();     //Start playing the audio
+        Debug.Log("Audio Initialiszed");
+        #endregion
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -92,6 +106,9 @@ public class Star : MonoBehaviour
 
                 break;
         }
+
+        emitter.Stop();     //Stop the idle emitter
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.starCollected, transform.position);   //Play sound at star location
     }
 
     public void InitializeSprites()
