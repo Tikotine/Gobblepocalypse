@@ -96,13 +96,15 @@ public class CheckpointManager : MonoBehaviour
         bs.resetPos(currentCheckpoint.x - bossRepsawnDistance);
     }
 
-    public void RetryColelctablesReset()
+    public void RetryColelctablesReset()        //Reset all collectables on death
     {
         for (int i = 0; i < collectablesOnScreen.Length; i++)
         {
             if (collectablesOnScreen[i] == null)
             {
-                Instantiate(collectablePrefab, collectablesLocation[i], Quaternion.identity);
+                GameObject newPrefab = Instantiate(collectablePrefab, collectablesLocation[i], Quaternion.identity);
+                Debug.Log("Collectable Respawned " + i);
+                collectablesOnScreen[i] = newPrefab;
             }
         }
     }
