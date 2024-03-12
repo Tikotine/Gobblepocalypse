@@ -15,6 +15,9 @@ public class Head : MonoBehaviour
     public Sticky solidSticky;
     public Sticky changeSticky;
 
+    //UI canvas
+    public GameObject BossUI;
+
     private void Start()
     {
         boss = GetComponentInParent<Boss>();
@@ -27,6 +30,8 @@ public class Head : MonoBehaviour
     {
         //always follow player yaxis
         transform.position = Vector2.Lerp(transform.position, getCamYPos(), Time.deltaTime * 4);
+        //make ui follow
+        BossUI.transform.position = Vector2.Lerp(BossUI.transform.position, new Vector2(cam.transform.position.x, transform.position.y-2), 10);
     }
 
     private Vector2 getCamYPos()
@@ -91,5 +96,17 @@ public class Head : MonoBehaviour
     {
         solidSticky.isSticking = false;
         changeSticky.isSticking = false;
+    }
+
+    private void OnBecameInvisible()
+    {
+        //show UI
+        BossUI.SetActive(true);
+    }
+
+    private void OnBecameVisible()
+    {
+        //hide UI
+        BossUI.SetActive(false);
     }
 }

@@ -29,8 +29,7 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject[] menuButtons;
     public GameObject mainMenuManagerObject;
     private MainMenuManager mainMenuManagerScript;
-    public Animator transition;
-    public float transitionTime = 1f;
+    private SceneController sceneManager;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +39,7 @@ public class MainMenuButtons : MonoBehaviour
         mainMenuManagerScript = mainMenuManagerObject.GetComponent<MainMenuManager>();
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerScript>();
-        transition = FindObjectOfType<Animator>();
+        sceneManager = FindObjectOfType<SceneController>();
     }
 
     // Update is called once per frame
@@ -71,7 +70,8 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
-                StartCoroutine(DoTransition("Jme Scene", MusicControl.LEVEL1));
+                //StartCoroutine(DoTransition("Jme Scene", MusicControl.LEVEL1));
+                sceneManager.DoTransition("LEVEL1", MusicControl.LEVEL1);
                 break;
 
             case ButtonType.LEVEL2:
@@ -165,11 +165,11 @@ public class MainMenuButtons : MonoBehaviour
 
     #endregion
 
-    IEnumerator DoTransition(string sceneName, MusicControl mc)
+    /*IEnumerator DoTransition(string sceneName, MusicControl mc)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         AudioManager.SetMusicControl(mc);
         SceneManager.LoadScene(sceneName);     
-    }
+    }*/
 }
