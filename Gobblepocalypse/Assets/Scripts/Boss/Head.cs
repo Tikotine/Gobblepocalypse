@@ -18,12 +18,17 @@ public class Head : MonoBehaviour
     //UI canvas
     public GameObject BossUI;
 
+    //sprites
+    public Sprite[] bossHeadSprites; //0 chase, 1 pre, 2 atk
+    private SpriteRenderer sr;
+
     private void Start()
     {
         boss = GetComponentInParent<Boss>();
         cam = FindObjectOfType<Camera>();
         cm = FindObjectOfType<CheckpointManager>();
         ps = FindObjectOfType<PlayerScript>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -32,6 +37,26 @@ public class Head : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, getCamYPos(), Time.deltaTime * 4);
         //make ui follow
         BossUI.transform.position = Vector2.Lerp(BossUI.transform.position, new Vector2(cam.transform.position.x, transform.position.y-2), 10);
+        changeSprite();
+    }
+
+    private void changeSprite()
+    {
+        switch (boss.currentState.ToString())
+        {
+            case "BossChase":
+                sr.sprite = bossHeadSprites[0];
+                break;
+            case "BossAttack":
+                sr.sprite = bossHeadSprites[2];
+                break;
+            case "BossInterrupt":
+                sr.sprite = bossHeadSprites[0];
+                break;
+            case "BossCharge":
+                sr.sprite = bossHeadSprites[1];
+                break;
+        }
     }
 
     private Vector2 getCamYPos()
