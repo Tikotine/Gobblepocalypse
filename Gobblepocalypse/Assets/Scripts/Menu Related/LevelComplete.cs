@@ -33,6 +33,7 @@ public class LevelComplete : MonoBehaviour
     public void mainMenu()
     {
         sc.DoTransition("MainMenu", MusicControl.MENU);
+        TutorialManager.instance.CheckTutorialStatus();
         sc.starAmt = 0;
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -15,18 +16,21 @@ public class TutorialManager : MonoBehaviour
     public GameObject rightClick;
     public GameObject leftClick;
     public GameObject spacebar;
+    public GameObject active;
     public GameObject cooldown;
-    public bool hasRightClicked;
-    public bool hasLeftClicked;
-    public bool hasPressedSpace;
-    public bool hasFinishedCooldown;
+    public GameObject dummyPrefab;
+    private GameObject dummyHolder;
+    public Vector3 dummyLocation;
+    private bool hasRightClicked;
+    private bool hasLeftClicked;
+    private bool hasPressedSpace;
     public bool disableTutorial;
 
     [Header("Background Colour")]
     public bool colourTransition;
     private int currentColorIndex = 0;
     private int targetColorIndex = 1;
-    private float targetPoint;
+    private float targetPoint = 0;
     public float time;
 
     private void Awake()
@@ -54,24 +58,28 @@ public class TutorialManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         DetectTutorialStage();
 
         if (colourTransition)
         {
             Transition();
         }
+
     }
 
     public void DetectTutorialStage()
     {
         if (!hasRightClicked && Input.GetKeyDown(KeyCode.Mouse1))
         {
-            FinishRightClickTutorial();
+            hasRightClicked = true;
+            Invoke("FinishRightClickTutorial", 2f);
         }
 
         if (!hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            FinishLeftClickTutorial();
+            hasLeftClicked = true;
+            Invoke("FinishLeftClickTutorial", 2f);
         }
 
         if (!hasPressedSpace && hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Space))
@@ -82,50 +90,59 @@ public class TutorialManager : MonoBehaviour
 
     public void FinishRightClickTutorial()
     {
-        hasRightClicked = true;
         rightClick.SetActive(false);
         leftClick.SetActive(true);
     }
 
     public void FinishLeftClickTutorial()
     {
-        hasLeftClicked = true;
         leftClick.SetActive(false);
+        cooldown.SetActive(false);
         spacebar.SetActive(true);
     }
 
     public void FinishPressSpaceTutorial()
-    { 
-        hasPressedSpace = true;
-        spacebar.SetActive(false);
-        cooldown.SetActive(true);
-        Invoke("FinishTutorial", 5f);
+    {
+        if (!disableTutorial)
+        {
+            dummyHolder = Instantiate(dummyPrefab, dummyLocation, Quaternion.identity);
+            hasPressedSpace = true;
+            spacebar.SetActive(false);
+            active.SetActive(true);
+            Invoke("FinishAttackTutorial", 5f);
+        }
+    }
+
+    public void FinishAttackTutorial()
+    {
+        if (!disableTutorial)
+        {
+            Destroy(dummyHolder);
+            active.SetActive(false);
+            cooldown.SetActive(true);
+            Invoke("FinishLeftClickTutorial", 3f);
+            hasPressedSpace = false;
+        }
     }
 
     public void FinishTutorial()
     {
+        disableTutorial = true;
         colourTransition = true;
+        cooldown.SetActive(false);
+        active.SetActive(false);
         GameObject.FindWithTag("MainMenuManager").GetComponent<MainMenuManager>().SpawnMainMenu();
-    }
-
-    public void CheckTutorialStatus()
-    {
-        if (disableTutorial)
-        {
-            DisableTutorial();
-        }
-
-        else 
-        {
-            return;
-        }
     }
 
     public void DisableTutorial()
     {
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        cam = mainCamera.GetComponent<Camera>();
         rightClick.SetActive(false);
         leftClick.SetActive(false);
         spacebar.SetActive(false);
+        active.SetActive(false);
+        cooldown.SetActive(false);
         cam.backgroundColor = backgroundColours[1];
         GameObject.FindWithTag("MainMenuManager").GetComponent<MainMenuManager>().SpawnMainMenu();
     }
@@ -135,18 +152,18 @@ public class TutorialManager : MonoBehaviour
         targetPoint += Time.deltaTime / time;
         cam.backgroundColor = Color.Lerp(backgroundColours[currentColorIndex], backgroundColours[targetColorIndex], targetPoint);
 
+    }
 
-        if (targetPoint >= 1f)
+    public void CheckTutorialStatus()
+    {
+        if (disableTutorial)
         {
-            targetPoint = 0f;
-            currentColorIndex = targetColorIndex;
-            targetColorIndex++;
-
-            if (targetColorIndex == backgroundColours.Length)
-            {
-                targetColorIndex = 0;
-            }
+            DisableTutorial();
         }
 
+        else
+        {
+            return;
+        }
     }
 }

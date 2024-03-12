@@ -20,6 +20,7 @@ public class MainMenuManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerScript>();
+        TutorialManager.instance.CheckTutorialStatus();
 
     }
 
