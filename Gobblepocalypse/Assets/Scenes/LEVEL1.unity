@@ -69410,7 +69410,7 @@ GameObject:
   - component: {fileID: 1651745132}
   - component: {fileID: 1651745133}
   m_Layer: 0
-  m_Name: Layer2
+  m_Name: Layer-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80301,9 +80301,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951926885051633956, guid: fdf00aa3dab8ff244aab88c7a21caef4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -188433937, guid: efa37029309db1047a74f1abbec070cf, type: 3}
     - target: {fileID: 951926885051633958, guid: fdf00aa3dab8ff244aab88c7a21caef4, type: 3}
       propertyPath: m_Name
       value: Star
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051450870910833453, guid: fdf00aa3dab8ff244aab88c7a21caef4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051450870910833453, guid: fdf00aa3dab8ff244aab88c7a21caef4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf00aa3dab8ff244aab88c7a21caef4, type: 3}
