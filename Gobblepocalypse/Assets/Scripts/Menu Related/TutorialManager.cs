@@ -152,6 +152,10 @@ public class TutorialManager : MonoBehaviour
         targetPoint += Time.deltaTime / time;
         cam.backgroundColor = Color.Lerp(backgroundColours[currentColorIndex], backgroundColours[targetColorIndex], targetPoint);
 
+        if (targetPoint >= 1f)
+        {
+            colourTransition = false;
+        }
     }
 
     public void CheckTutorialStatus()
