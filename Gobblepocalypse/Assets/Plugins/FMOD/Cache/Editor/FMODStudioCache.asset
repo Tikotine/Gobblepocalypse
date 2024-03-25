@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638466339544510180
+  lastModified: 638469664641043500
   FileSizes:
   - Name: Desktop
     Value: 3338464
@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638466339550890288
+  lastModified: 638469664656342184
   FileSizes:
   - Name: Desktop
-    Value: 1900000
+    Value: 2353600
   Exists: 1
 --- !u!114 &-6481041175918926939
 MonoBehaviour:
@@ -218,7 +218,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638466339552286473
+  lastModified: 638469664657229013
   FileSizes:
   - Name: Desktop
     Value: 99616
@@ -256,7 +256,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638466339552286473
+  cacheTime: 638469664657229013
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -273,7 +273,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638466339544677527
+  lastModified: 638469664641440723
   FileSizes:
   - Name: Desktop
     Value: 1604
@@ -428,7 +428,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638466339544657604
+  lastModified: 638469664641440723
   FileSizes:
   - Name: Desktop
     Value: 1486
