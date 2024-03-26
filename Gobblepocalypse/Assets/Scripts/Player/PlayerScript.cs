@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using FMOD.Studio;
+using FMODUnity;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -79,6 +80,7 @@ public class PlayerScript : MonoBehaviour
     //Audio
     [field: Header("Player Audio")]
     private EventInstance playerRoll;
+    private EventInstance playerCharge;
 
     // Start is called before the first frame update
     void Awake()
@@ -100,6 +102,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         playerRoll = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerRoll);     //Initalize instance for roll audio
+        playerCharge = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerCharge);     //Initalize instance for roll audio
     }
 
     // Update is called once per frame
@@ -140,6 +143,7 @@ public class PlayerScript : MonoBehaviour
             rb.AddForce(mouseDistance * shootPower, ForceMode2D.Impulse);  //add a force to player in direction of mouse
             charges--;  //use a charge
             isShooting = false;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerShoot, transform.position);   //Play sound at collectable location
             pf.changeFace(1);
         }
 
@@ -149,7 +153,7 @@ public class PlayerScript : MonoBehaviour
 
         #region Charging
         if (Input.GetKey(KeyCode.Mouse1) && !isShooting)    //On right mouse hold
-        { 
+        {
             canShoot = false;
             chargeTimerActive = true;       //Toggle all booleans
             pf.changeFace(3);
@@ -198,6 +202,7 @@ public class PlayerScript : MonoBehaviour
                 if (charges < maxCharges)   //If charges is less than max amount
                 {
                     charges++;      //Add a charge
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.playerGainCharge, transform.position);   //Play sound at collectable location
                     chargeTimer = 0;    //Reset timer
 
                     chargingSlider.value = chargeTimer;
@@ -217,6 +222,7 @@ public class PlayerScript : MonoBehaviour
             sr.color = attackingColour; //Change colour here
             pf.changeFace(2);
             attackButton.color = attackingColour;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerAttackModeActivate, transform.position);   //Play sound at collectable location
         }
 
         if (attackTimerActive == true && isAttacking == true)   //If the attack timer is on
@@ -233,6 +239,7 @@ public class PlayerScript : MonoBehaviour
                 attackCooldownTimerActive = true;
 
                 attackButton.color = buttonDefaultColour;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerAttackModeCooldown, transform.position);   //Play sound at collectable location
             }
         }
 
@@ -253,6 +260,7 @@ public class PlayerScript : MonoBehaviour
                 attackCooldownTimerActive = false;  //Turn off the cooldown boolean
                 attackCooldownTimer = 0;    //Reset timer
                 sr.color = defaultColour;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerAttackModeReady, transform.position);   //Play sound at collectable location
 
                 attackTextCooldown.gameObject.SetActive(false); //Hide cooling down UI
                 attackUICooldown.fillAmount = 0.0f;
@@ -296,6 +304,7 @@ public class PlayerScript : MonoBehaviour
         chargingSlider.value = 0;
         chargingBar.SetActive(false);
         chargeParticlesObject.GetComponent<ParticleSystem>().Stop();
+        playerCharge.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void UpdateSound()
@@ -314,7 +323,24 @@ public class PlayerScript : MonoBehaviour
 
             else    //Else stop playback
             {
-                playerRoll.stop(STOP_MODE.ALLOWFADEOUT);
+                playerRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+
+        if (isCharging)
+        {
+            //Get the playback state, we dont want it to play if it is already playing
+            PLAYBACK_STATE playbackState;
+            playerCharge.getPlaybackState(out playbackState);
+
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))   //If playback is currently stopped, play it
+            {
+                playerCharge.start();
+            }
+
+            else    //Else stop playback
+            {
+                playerCharge.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
     }

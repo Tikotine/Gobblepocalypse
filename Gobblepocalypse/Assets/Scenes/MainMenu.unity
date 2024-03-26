@@ -12946,6 +12946,7 @@ GameObject:
   - component: {fileID: 1390972223}
   - component: {fileID: 1390972222}
   - component: {fileID: 1390972221}
+  - component: {fileID: 1390972226}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -14544,6 +14545,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1390972226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390972219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857bc0f88865d764291bd186f35a194d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425176413
 GameObject:
   m_ObjectHideFlags: 0
@@ -21581,6 +21594,306 @@ PrefabInstance:
     - target: {fileID: 6119764833112885092, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossAttack>k__BackingField.Path
+      value: event:/SFX/Boss/BossAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossCharge>k__BackingField.Path
+      value: event:/SFX/Boss/BossCharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerDeath>k__BackingField.Path
+      value: event:/SFX/Player/PlayerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerShoot>k__BackingField.Path
+      value: event:/SFX/Player/PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossMovement>k__BackingField.Path
+      value: event:/SFX/Boss/BossMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerCharge>k__BackingField.Path
+      value: event:/SFX/Player/PlayerCharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossInterrupted>k__BackingField.Path
+      value: event:/SFX/Boss/BossInterrupted
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallSplat>k__BackingField.Path
+      value: event:/SFX/Player/PlayerWallSplat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallStick>k__BackingField.Path
+      value: event:/SFX/Player/PlayerWallStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossAttack>k__BackingField.Guid.Data1
+      value: 2056289470
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossAttack>k__BackingField.Guid.Data2
+      value: 1332453221
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossAttack>k__BackingField.Guid.Data3
+      value: 1653696646
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossAttack>k__BackingField.Guid.Data4
+      value: -26855337
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossCharge>k__BackingField.Guid.Data1
+      value: 1759961815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossCharge>k__BackingField.Guid.Data2
+      value: 1102056358
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossCharge>k__BackingField.Guid.Data3
+      value: 1489012372
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossCharge>k__BackingField.Guid.Data4
+      value: -522708595
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerGainCharge>k__BackingField.Path
+      value: event:/SFX/Player/PlayerGainCharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallBounce>k__BackingField.Path
+      value: event:/SFX/Player/PlayerWallBounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerDeath>k__BackingField.Guid.Data1
+      value: -1754663479
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerDeath>k__BackingField.Guid.Data2
+      value: 1315576825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerDeath>k__BackingField.Guid.Data3
+      value: -239556463
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerDeath>k__BackingField.Guid.Data4
+      value: 1921782232
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerShoot>k__BackingField.Guid.Data1
+      value: -978352252
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerShoot>k__BackingField.Guid.Data2
+      value: 1154273535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerShoot>k__BackingField.Guid.Data3
+      value: -1998499404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerShoot>k__BackingField.Guid.Data4
+      value: 393143623
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossMovement>k__BackingField.Guid.Data1
+      value: -221012446
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossMovement>k__BackingField.Guid.Data2
+      value: 1216078706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossMovement>k__BackingField.Guid.Data3
+      value: 194775973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossMovement>k__BackingField.Guid.Data4
+      value: 706251460
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerCharge>k__BackingField.Guid.Data1
+      value: -214510037
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerCharge>k__BackingField.Guid.Data2
+      value: 1263227819
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerCharge>k__BackingField.Guid.Data3
+      value: -260307784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerCharge>k__BackingField.Guid.Data4
+      value: 980933975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerBossInterrupt>k__BackingField.Path
+      value: event:/SFX/Player/PlayerBossInterrupt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossInterrupted>k__BackingField.Guid.Data1
+      value: 1245844032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossInterrupted>k__BackingField.Guid.Data2
+      value: 1098320862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossInterrupted>k__BackingField.Guid.Data3
+      value: 1161410953
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <bossInterrupted>k__BackingField.Guid.Data4
+      value: -774742128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeReady>k__BackingField.Path
+      value: event:/SFX/Player/PlayerAttackModeReady
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallSplat>k__BackingField.Guid.Data1
+      value: -318863391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallSplat>k__BackingField.Guid.Data2
+      value: 1120521085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallSplat>k__BackingField.Guid.Data3
+      value: -578521930
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallSplat>k__BackingField.Guid.Data4
+      value: -1789847804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallStick>k__BackingField.Guid.Data1
+      value: 718024695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallStick>k__BackingField.Guid.Data2
+      value: 1111413207
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallStick>k__BackingField.Guid.Data3
+      value: 603310762
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallStick>k__BackingField.Guid.Data4
+      value: -1830388356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerGainCharge>k__BackingField.Guid.Data1
+      value: -864272478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerGainCharge>k__BackingField.Guid.Data2
+      value: 1315760563
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerGainCharge>k__BackingField.Guid.Data3
+      value: -439720545
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerGainCharge>k__BackingField.Guid.Data4
+      value: 142481586
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallBounce>k__BackingField.Guid.Data1
+      value: -1340398865
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallBounce>k__BackingField.Guid.Data2
+      value: 1132130289
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallBounce>k__BackingField.Guid.Data3
+      value: -1389242996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerWallBounce>k__BackingField.Guid.Data4
+      value: 319112975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeActivate>k__BackingField.Path
+      value: event:/SFX/Player/PlayerAttackModeActivate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeCooldown>k__BackingField.Path
+      value: event:/SFX/Player/PlayerAttackModeCooldown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerBossInterrupt>k__BackingField.Guid.Data1
+      value: 1793340883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerBossInterrupt>k__BackingField.Guid.Data2
+      value: 1222890024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerBossInterrupt>k__BackingField.Guid.Data3
+      value: -2070884186
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerBossInterrupt>k__BackingField.Guid.Data4
+      value: -1944824237
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeReady>k__BackingField.Guid.Data1
+      value: 1637532113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeReady>k__BackingField.Guid.Data2
+      value: 1279076815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeReady>k__BackingField.Guid.Data3
+      value: 1078838941
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeReady>k__BackingField.Guid.Data4
+      value: 1321457292
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeActivate>k__BackingField.Guid.Data1
+      value: 397643201
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeActivate>k__BackingField.Guid.Data2
+      value: 1074946972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeActivate>k__BackingField.Guid.Data3
+      value: 1558562464
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeActivate>k__BackingField.Guid.Data4
+      value: 322606389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeCooldown>k__BackingField.Guid.Data1
+      value: 1617377093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeCooldown>k__BackingField.Guid.Data2
+      value: 1130023530
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeCooldown>k__BackingField.Guid.Data3
+      value: 465540258
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerAttackModeCooldown>k__BackingField.Guid.Data4
+      value: -1068319085
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}

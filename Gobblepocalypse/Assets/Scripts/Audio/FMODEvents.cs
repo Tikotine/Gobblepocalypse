@@ -18,6 +18,23 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerRoll { get; private set; }
+    [field: SerializeField] public EventReference playerCharge { get; private set; }
+    [field: SerializeField] public EventReference playerGainCharge { get; private set; }
+    [field: SerializeField] public EventReference playerShoot { get; private set; }
+    [field: SerializeField] public EventReference playerAttackModeActivate { get; private set; }
+    [field: SerializeField] public EventReference playerAttackModeCooldown { get; private set; }
+    [field: SerializeField] public EventReference playerAttackModeReady { get; private set; }
+    [field: SerializeField] public EventReference playerBossInterrupt { get; private set; }
+    [field: SerializeField] public EventReference playerWallBounce { get; private set; }
+    [field: SerializeField] public EventReference playerWallSplat { get; private set; }
+    [field: SerializeField] public EventReference playerWallStick { get; private set; }
+    [field: SerializeField] public EventReference playerDeath { get; private set; }
+
+    [field: Header("Boss SFX")]
+    [field: SerializeField] public EventReference bossMovement { get; private set; }
+    [field: SerializeField] public EventReference bossCharge { get; private set; }
+    [field: SerializeField] public EventReference bossAttack { get; private set; }
+    [field: SerializeField] public EventReference bossInterrupted { get; private set; }
 
     [field: Header("Collectable SFX")]
     [field: SerializeField] public EventReference collectableCollected { get; private set; }
@@ -26,6 +43,7 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Star SFX")]
     [field: SerializeField] public EventReference starCollected { get; private set; }
     [field: SerializeField] public EventReference starIdle { get; private set; }
+
 
     private void Awake()
     {

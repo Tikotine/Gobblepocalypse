@@ -25,6 +25,7 @@ public class Sticky : MonoBehaviour
         { 
             stickLocation = collision.gameObject.GetComponent<Transform>().position;
             isSticking = true;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerWallStick, collision.transform.position);   //Play sound at collision location
         }
     }
 

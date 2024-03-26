@@ -8780,6 +8780,7 @@ GameObject:
   - component: {fileID: 1081002051}
   - component: {fileID: 1081002053}
   - component: {fileID: 1081002052}
+  - component: {fileID: 1081002054}
   m_Layer: 7
   m_Name: NoChangeBouncy
   m_TagString: SolidPlatform
@@ -9322,6 +9323,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1081002054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081002047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6cd944c7b6ba40bfe14a05f41a344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1090569369
 GameObject:
   m_ObjectHideFlags: 0
@@ -12765,6 +12778,7 @@ GameObject:
   - component: {fileID: 1444246300}
   - component: {fileID: 1444246302}
   - component: {fileID: 1444246301}
+  - component: {fileID: 1444246303}
   m_Layer: 7
   m_Name: NoChangeSolid
   m_TagString: SolidPlatform
@@ -49379,6 +49393,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1444246303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444246296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857bc0f88865d764291bd186f35a194d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445646020
 GameObject:
   m_ObjectHideFlags: 0
@@ -60348,6 +60374,7 @@ GameObject:
   - component: {fileID: 1761601581}
   - component: {fileID: 1761601583}
   - component: {fileID: 1761601582}
+  - component: {fileID: 1761601584}
   m_Layer: 7
   m_Name: ChangeBouncy
   m_TagString: ColourPlatform
@@ -60776,6 +60803,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1761601584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761601576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6cd944c7b6ba40bfe14a05f41a344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1764808381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3634815500578675859, guid: 977cfdf94e3aba7479f1409c4f2647fb, type: 3}
@@ -61628,6 +61667,7 @@ GameObject:
   - component: {fileID: 1886105970}
   - component: {fileID: 1886105972}
   - component: {fileID: 1886105971}
+  - component: {fileID: 1886105973}
   m_Layer: 7
   m_Name: ChangeSolid
   m_TagString: ColourPlatform
@@ -63650,6 +63690,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1886105973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886105965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857bc0f88865d764291bd186f35a194d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1909396637
 GameObject:
   m_ObjectHideFlags: 0

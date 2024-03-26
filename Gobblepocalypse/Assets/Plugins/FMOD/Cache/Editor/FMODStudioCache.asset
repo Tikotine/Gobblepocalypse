@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9141591044222808875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerAttackModeReady
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerAttackModeReady
+  Guid:
+    Data1: 1637532113
+    Data2: 1279076815
+    Data3: 1078838941
+    Data4: 1321457292
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8432266211318671687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Boss/BossMovement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Boss/BossMovement
+  Guid:
+    Data1: -221012446
+    Data2: 1216078706
+    Data3: 194775973
+    Data4: 706251460
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6416
 --- !u!114 &-8343857949929483764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,38 +143,12 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638469664656342184
+  lastModified: 638470904856873572
   FileSizes:
   - Name: Desktop
-    Value: 2353600
+    Value: 4811648
   Exists: 1
---- !u!114 &-6481041175918926939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicControl/MusicControl
-  m_EditorClassIdentifier: 
-  Name: MusicControl
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2677693492
-    data2: 4143037301
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - MAIN
-  - LEVEL1
-  Exists: 1
---- !u!114 &-5400047657399793780
+--- !u!114 &-6900922815864401784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,22 +158,74 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM/MusicControl
+  m_Name: event:/SFX/Player/PlayerCharge
   m_EditorClassIdentifier: 
-  Path: event:/BGM/MusicControl
+  Path: event:/SFX/Player/PlayerCharge
   Guid:
-    Data1: -1211580846
-    Data2: 1335593336
-    Data3: 1020367239
-    Data4: -1888489854
+    Data1: -214510037
+    Data2: 1263227819
+    Data3: -260307784
+    Data4: 980933975
   Banks:
-  - {fileID: -7233695075780977409}
-  IsStream: 1
+  - {fileID: -972065946555918996}
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3718036260096964048}
-  - {fileID: -6481041175918926939}
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 451
+--- !u!114 &-6011081655684050136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerAttackModeActivate
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerAttackModeActivate
+  Guid:
+    Data1: 397643201
+    Data2: 1074946972
+    Data3: 1558562464
+    Data4: 322606389
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5720488825207599885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerWallSplat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerWallSplat
+  Guid:
+    Data1: -318863391
+    Data2: 1120521085
+    Data3: -578521930
+    Data4: -1789847804
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -167,6 +247,33 @@ MonoBehaviour:
     Data2: 1206513231
     Data3: -1070980184
     Data4: -833489555
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3290198895093575717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerDeath
+  Guid:
+    Data1: -1754663479
+    Data2: 1315576825
+    Data3: -239556463
+    Data4: 1921782232
   Banks:
   - {fileID: -972065946555918996}
   IsStream: 0
@@ -203,6 +310,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1846
+--- !u!114 &-1187456330537755658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Boss/BossCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Boss/BossCharge
+  Guid:
+    Data1: 1759961815
+    Data2: 1102056358
+    Data3: 1489012372
+    Data4: -522708595
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1116804018164781446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Boss/BossInterrupted
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Boss/BossInterrupted
+  Guid:
+    Data1: 1245844032
+    Data2: 1098320862
+    Data3: 1161410953
+    Data4: -774742128
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-972065946555918996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638469664657229013
+  lastModified: 638470914734055258
   FileSizes:
   - Name: Desktop
-    Value: 99616
+    Value: 165120
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -243,20 +404,35 @@ MonoBehaviour:
   - {fileID: -7233695075780977409}
   EditorEvents:
   - {fileID: 6357964822921060118}
-  - {fileID: 5785522210257475664}
   - {fileID: -7863694437374645269}
   - {fileID: 4873485969704544237}
   - {fileID: -3768758195923011085}
-  - {fileID: -5400047657399793780}
   - {fileID: -3217636671295418973}
   - {fileID: 2309437181037040092}
   - {fileID: -8343857949929483764}
+  - {fileID: 9172236303269697258}
+  - {fileID: 8898133449246799906}
+  - {fileID: -8432266211318671687}
+  - {fileID: -6900922815864401784}
+  - {fileID: -1116804018164781446}
+  - {fileID: 6298027950450207842}
+  - {fileID: 3832037003665924325}
+  - {fileID: 4702252659687700499}
+  - {fileID: 2450582228436768218}
+  - {fileID: -6011081655684050136}
+  - {fileID: -3290198895093575717}
+  - {fileID: -9141591044222808875}
+  - {fileID: 1235333264961026300}
+  - {fileID: -1187456330537755658}
+  - {fileID: -5720488825207599885}
+  - {fileID: 5435842189573272473}
+  - {fileID: 2382747201377841555}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638469664657229013
+  cacheTime: 638470914734055258
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -273,11 +449,38 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638469664641440723
+  lastModified: 638470904838010764
   FileSizes:
   - Name: Desktop
-    Value: 1604
+    Value: 2286
   Exists: 1
+--- !u!114 &1235333264961026300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerBossInterrupt
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerBossInterrupt
+  Guid:
+    Data1: 1793340883
+    Data2: 1222890024
+    Data3: -2070884186
+    Data4: -1944824237
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2309437181037040092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +508,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3718036260096964048
+--- !u!114 &2382747201377841555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,23 +517,105 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicControl/Area
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerWallStick
   m_EditorClassIdentifier: 
-  Name: Area
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2267047097
-    data2: 2013697285
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Area1
-  - Area2
-  Exists: 1
+  Path: event:/SFX/Player/PlayerWallStick
+  Guid:
+    Data1: 718024695
+    Data2: 1111413207
+    Data3: 603310762
+    Data4: -1830388356
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2450582228436768218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Boss/BossAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Boss/BossAttack
+  Guid:
+    Data1: 2056289470
+    Data2: 1332453221
+    Data3: 1653696646
+    Data4: -26855337
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3832037003665924325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerShoot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerShoot
+  Guid:
+    Data1: -978352252
+    Data2: 1154273535
+    Data3: -1998499404
+    Data4: 393143623
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4702252659687700499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerGainCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerGainCharge
+  Guid:
+    Data1: -864272478
+    Data2: 1315760563
+    Data3: -439720545
+    Data4: 142481586
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4873485969704544237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +643,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6416
---- !u!114 &5785522210257475664
+--- !u!114 &5435842189573272473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,23 +653,78 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM/MainMenuMusic
+  m_Name: event:/SFX/Player/PlayerWallBounce
   m_EditorClassIdentifier: 
-  Path: event:/BGM/MainMenuMusic
+  Path: event:/SFX/Player/PlayerWallBounce
   Guid:
-    Data1: -2078036106
-    Data2: 1090691983
-    Data3: 662314913
-    Data4: 216755356
+    Data1: -1340398865
+    Data2: 1132130289
+    Data3: -1389242996
+    Data4: 319112975
   Banks:
-  - {fileID: -7233695075780977409}
-  IsStream: 1
+  - {fileID: -972065946555918996}
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 29538
+  Length: 0
+--- !u!114 &6088815512233690330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicControl/MusicControl
+  m_EditorClassIdentifier: 
+  Name: MusicControl
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2677693492
+    data2: 4143037301
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - MAIN
+  - LEVEL1
+  - LEVEL2
+  - LEVEL3
+  Exists: 1
+--- !u!114 &6298027950450207842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerAttackModeCooldown
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerAttackModeCooldown
+  Guid:
+    Data1: 1617377093
+    Data2: 1130023530
+    Data3: 465540258
+    Data4: -1068319085
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6357964822921060118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,10 +768,36 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638469664641440723
+  lastModified: 638470904837928759
   FileSizes:
   - Name: Desktop
     Value: 1486
+  Exists: 1
+--- !u!114 &8280336967507366350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicControl/Area
+  m_EditorClassIdentifier: 
+  Name: Area
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2267047097
+    data2: 2013697285
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Area1
+  - Area2
   Exists: 1
 --- !u!114 &8785933245543473791
 MonoBehaviour:
@@ -457,3 +823,59 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8898133449246799906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/MainMenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/MainMenuMusic
+  Guid:
+    Data1: -2078036106
+    Data2: 1090691983
+    Data3: 662314913
+    Data4: 216755356
+  Banks:
+  - {fileID: -7233695075780977409}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 29538
+--- !u!114 &9172236303269697258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/MusicControl
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/MusicControl
+  Guid:
+    Data1: -1211580846
+    Data2: 1335593336
+    Data3: 1020367239
+    Data4: -1888489854
+  Banks:
+  - {fileID: -7233695075780977409}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8280336967507366350}
+  - {fileID: 6088815512233690330}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
