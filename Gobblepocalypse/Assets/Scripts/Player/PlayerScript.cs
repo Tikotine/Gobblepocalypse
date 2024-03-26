@@ -35,6 +35,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     public BoxCollider2D feetCol;
     public LayerMask groundLayers;
+    private PlayerFace pf;
 
     //Line
     [field: Header("Line References")]
@@ -85,6 +86,7 @@ public class PlayerScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();   //Reference the players rigidbody2D
         lr = gameObject.GetComponent<LineRenderer>();   //Reference the player's line renderer
         sr = GetComponent<SpriteRenderer>();
+        pf = GetComponentInChildren<PlayerFace>();
         cp = collisionParticlesObject.GetComponent<CollisionParticles>();
         lr.enabled = false;
 
@@ -138,6 +140,7 @@ public class PlayerScript : MonoBehaviour
             rb.AddForce(mouseDistance * shootPower, ForceMode2D.Impulse);  //add a force to player in direction of mouse
             charges--;  //use a charge
             isShooting = false;
+            pf.changeFace(1);
         }
 
         #endregion
@@ -149,7 +152,7 @@ public class PlayerScript : MonoBehaviour
         { 
             canShoot = false;
             chargeTimerActive = true;       //Toggle all booleans
-
+            pf.changeFace(3);
             if (isAttacking != true)
             {
                 sr.color = chargingColour;
@@ -173,6 +176,7 @@ public class PlayerScript : MonoBehaviour
             isCharging = false;
             chargeTimerActive = false;
             chargeTimer = 0;    //Reset charge timer
+            pf.changeFace(4);
 
             if (isAttacking != true)
             {
@@ -211,7 +215,7 @@ public class PlayerScript : MonoBehaviour
             attackTimer = attackDuration;   //Set the timer to its duration
             attackTimerActive = true;       //Begin the attack timer countdown
             sr.color = attackingColour; //Change colour here
-
+            pf.changeFace(2);
             attackButton.color = attackingColour;
         }
 
