@@ -5,7 +5,6 @@ using UnityEngine;
 public class LevelComplete : MonoBehaviour
 {
     private SceneController sc;
-    public string nextLevelName;
     public MusicControl nextLevelMusicEnum;
     public GameObject[] images;
 
@@ -39,7 +38,7 @@ public class LevelComplete : MonoBehaviour
 
     public void nextLvl()
     {
-        sc.DoTransition(nextLevelName, nextLevelMusicEnum);
+        sc.DoTransitionInt(sc.lastSceneBuildIndex+1, nextLevelMusicEnum);
         sc.starAmt = 0;
     }
 }
