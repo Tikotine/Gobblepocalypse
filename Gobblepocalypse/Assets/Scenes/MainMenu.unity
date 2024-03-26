@@ -21492,7 +21492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4221730868833787518, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
       propertyPath: disableTutorial
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221730868833787518, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
+      propertyPath: colourTransition
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4221730868833787519, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
       propertyPath: m_RootOrder
