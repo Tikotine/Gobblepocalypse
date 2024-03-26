@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 //jme
 public class Boss : MonoBehaviour
@@ -157,6 +158,19 @@ public class Boss : MonoBehaviour
     public void setStateImg()
     {
         stateIndicator.sprite = stateimages[activeStateImg];
+    }
+
+    #endregion
+
+    #region Sound
+    public void PlayChargeSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.bossCharge, player.transform.position);   //Play sound at player location
+    }
+
+    public void PlayAttackSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.bossAttack, player.transform.position);   //Play sound at player location
     }
 
     #endregion

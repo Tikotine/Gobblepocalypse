@@ -27,6 +27,8 @@ public class TargetDummy : MonoBehaviour
         {
             TutorialManager.instance.disableTutorial = true;
             YeetBoss();
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerBossInterrupt, collision.transform.position);   //Play sound at collectable location
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.bossInterrupted, transform.position);   //Play sound at collectable location
             Invoke("DelayFinishTutorial", 3f);
         }
     }

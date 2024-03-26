@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9213069052366262179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/PlayerSpiked
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/PlayerSpiked
+  Guid:
+    Data1: -1042297847
+    Data2: 1125585643
+    Data3: 1464992938
+    Data4: -103636238
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-9141591044222808875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,10 +406,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638470914734055258
+  lastModified: 638470952522391320
   FileSizes:
   - Name: Desktop
-    Value: 165120
+    Value: 179456
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -427,12 +454,16 @@ MonoBehaviour:
   - {fileID: -5720488825207599885}
   - {fileID: 5435842189573272473}
   - {fileID: 2382747201377841555}
+  - {fileID: -9213069052366262179}
+  - {fileID: 6005691998103244930}
+  - {fileID: 7013254661881642407}
+  - {fileID: 5834988046917566238}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638470914734055258
+  cacheTime: 638470952522391320
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -449,10 +480,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638470904838010764
+  lastModified: 638470952522138573
   FileSizes:
   - Name: Desktop
-    Value: 2286
+    Value: 2504
   Exists: 1
 --- !u!114 &1235333264961026300
 MonoBehaviour:
@@ -670,6 +701,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5834988046917566238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Stuff/LevelComplete
+  m_EditorClassIdentifier: 
+  Path: event:/Level Stuff/LevelComplete
+  Guid:
+    Data1: 714704098
+    Data2: 1146413229
+    Data3: 1605804732
+    Data4: 801643399
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6005691998103244930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Stuff/Transition
+  m_EditorClassIdentifier: 
+  Path: event:/Level Stuff/Transition
+  Guid:
+    Data1: 1485962965
+    Data2: 1234120046
+    Data3: 592924033
+    Data4: -363246003
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6088815512233690330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,11 +853,38 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638470904837928759
+  lastModified: 638470952522127827
   FileSizes:
   - Name: Desktop
     Value: 1486
   Exists: 1
+--- !u!114 &7013254661881642407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Checkpoint/CheckpointActivated
+  m_EditorClassIdentifier: 
+  Path: event:/Checkpoint/CheckpointActivated
+  Guid:
+    Data1: -1091593767
+    Data2: 1309261013
+    Data3: -630972536
+    Data4: 1589818996
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8280336967507366350
 MonoBehaviour:
   m_ObjectHideFlags: 0

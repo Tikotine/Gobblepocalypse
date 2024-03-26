@@ -23,6 +23,7 @@ public class DeadZone : MonoBehaviour
             cm.player.GetComponent<PlayerScript>().ResetTimers();   //Reset attackmode timers
             cm.player.GetComponent<PlayerScript>().ResetVelocity(); //Reset player velocity
             bossScript.SetCurrentState(new BossChase(bossScript));      //Reset boss state
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDeath, cm.player.transform.position);   //Play sound at player location
         }
     }
 }

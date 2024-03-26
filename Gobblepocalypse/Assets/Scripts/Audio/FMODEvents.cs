@@ -16,6 +16,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Button SFX")]
     [field: SerializeField] public EventReference buttonPress { get; private set; }
 
+    [field: Header("Transition SFX")]
+    [field: SerializeField] public EventReference transitionSound { get; private set; }
+
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerRoll { get; private set; }
     [field: SerializeField] public EventReference playerCharge { get; private set; }
@@ -28,6 +31,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference playerWallBounce { get; private set; }
     [field: SerializeField] public EventReference playerWallSplat { get; private set; }
     [field: SerializeField] public EventReference playerWallStick { get; private set; }
+    [field: SerializeField] public EventReference playerSpiked { get; private set; }
     [field: SerializeField] public EventReference playerDeath { get; private set; }
 
     [field: Header("Boss SFX")]
@@ -40,9 +44,15 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference collectableCollected { get; private set; }
     [field: SerializeField] public EventReference collectableIdle { get; private set; }
 
+    [field: Header("Checkpoint SFX")]
+    [field: SerializeField] public EventReference checkpointActivated { get; private set; }
+
     [field: Header("Star SFX")]
     [field: SerializeField] public EventReference starCollected { get; private set; }
     [field: SerializeField] public EventReference starIdle { get; private set; }
+
+    [field: Header("Level Complete SFX")]
+    [field: SerializeField] public EventReference levelComplete { get; private set; }
 
 
     private void Awake()

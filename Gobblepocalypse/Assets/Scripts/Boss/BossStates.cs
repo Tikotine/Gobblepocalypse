@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 //jme
 public abstract class BossStates 
 {
@@ -51,6 +52,7 @@ public class BossCharge : BossStates
         //boss.changeColor(Color.blue);
         boss.changeStateImg();
         boss.setStateImg();
+        boss.PlayChargeSound();
     }
 
     float timer = 0;
@@ -81,6 +83,7 @@ public class BossAttack : BossStates
         //boss.changeColor(Color.red);
         boss.changeStateImg();
         boss.setStateImg();
+        boss.PlayAttackSound();
     }
 
     public override void DoActionUpdate(float dTime)

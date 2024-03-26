@@ -21492,7 +21492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4221730868833787518, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
       propertyPath: disableTutorial
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4221730868833787519, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
       propertyPath: m_RootOrder
@@ -21620,6 +21620,14 @@ PrefabInstance:
       value: event:/SFX/Player/PlayerCharge
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerSpiked>k__BackingField.Path
+      value: event:/SFX/Player/PlayerSpiked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <levelComplete>k__BackingField.Path
+      value: event:/Level Stuff/LevelComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossInterrupted>k__BackingField.Path
       value: event:/SFX/Boss/BossInterrupted
       objectReference: {fileID: 0}
@@ -21630,6 +21638,10 @@ PrefabInstance:
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerWallStick>k__BackingField.Path
       value: event:/SFX/Player/PlayerWallStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <transitionSound>k__BackingField.Path
+      value: event:/Level Stuff/Transition
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Guid.Data1
@@ -21736,6 +21748,42 @@ PrefabInstance:
       value: 980933975
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerSpiked>k__BackingField.Guid.Data1
+      value: -1042297847
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerSpiked>k__BackingField.Guid.Data2
+      value: 1125585643
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerSpiked>k__BackingField.Guid.Data3
+      value: 1464992938
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <playerSpiked>k__BackingField.Guid.Data4
+      value: -103636238
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <checkpointActivated>k__BackingField.Path
+      value: event:/Checkpoint/CheckpointActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <levelComplete>k__BackingField.Guid.Data1
+      value: 714704098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <levelComplete>k__BackingField.Guid.Data2
+      value: 1146413229
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <levelComplete>k__BackingField.Guid.Data3
+      value: 1605804732
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <levelComplete>k__BackingField.Guid.Data4
+      value: 801643399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerBossInterrupt>k__BackingField.Path
       value: event:/SFX/Player/PlayerBossInterrupt
       objectReference: {fileID: 0}
@@ -21792,6 +21840,22 @@ PrefabInstance:
       value: -1830388356
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <transitionSound>k__BackingField.Guid.Data1
+      value: 1485962965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <transitionSound>k__BackingField.Guid.Data2
+      value: 1234120046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <transitionSound>k__BackingField.Guid.Data3
+      value: 592924033
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <transitionSound>k__BackingField.Guid.Data4
+      value: -363246003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerGainCharge>k__BackingField.Guid.Data1
       value: -864272478
       objectReference: {fileID: 0}
@@ -21830,6 +21894,22 @@ PrefabInstance:
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerAttackModeCooldown>k__BackingField.Path
       value: event:/SFX/Player/PlayerAttackModeCooldown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <checkpointActivated>k__BackingField.Guid.Data1
+      value: -1091593767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <checkpointActivated>k__BackingField.Guid.Data2
+      value: 1309261013
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <checkpointActivated>k__BackingField.Guid.Data3
+      value: -630972536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <checkpointActivated>k__BackingField.Guid.Data4
+      value: 1589818996
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerBossInterrupt>k__BackingField.Guid.Data1

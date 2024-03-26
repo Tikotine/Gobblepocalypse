@@ -73,6 +73,8 @@ public class Head : MonoBehaviour
                 //if in preatk state true
                 Debug.Log("player interrupted boss");
                 boss.SetCurrentState(new BossInterrupt(boss));
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerBossInterrupt, ps.transform.position);   //Play sound at boss location
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.bossInterrupted, transform.position);   //Play sound at boss location
             }
             else if (isBossInInterrupt(boss.currentState.ToString()))
             {
@@ -89,6 +91,7 @@ public class Head : MonoBehaviour
                 ps.ResetTimers();   //Reset attackmode timers
                 boss.SetCurrentState(new BossChase(boss));
                 ps.ResetVelocity(); //Reset player velocity
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDeath, ps.transform.position);   //Play sound at boss location
             }
         }
     }

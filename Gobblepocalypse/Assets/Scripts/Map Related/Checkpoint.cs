@@ -38,7 +38,7 @@ public class Checkpoint : MonoBehaviour
             }
 
             cm.SetCheckpoint(checkpointNo);     //Sets the checkpoint using the checkpointmanager
-
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.checkpointActivated, transform.position);   //Play sound at collision location
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().color = activatedColor;
 
