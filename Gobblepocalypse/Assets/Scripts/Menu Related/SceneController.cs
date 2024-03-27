@@ -8,11 +8,20 @@ public class SceneController : MonoBehaviour
     public float transitionTime = 1f;
     public int starAmt;
     public int lastSceneBuildIndex;
+    private static SceneController Instance;
 
     private void Awake()
     {
         transition = GetComponentInChildren<Animator>();
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void DoTransition(string sceneName, MusicControl mc)

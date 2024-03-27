@@ -8,11 +8,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject quitMenu;
     public bool isPaused = false;
+    private SceneController sc;
+    private bool doOnce = false;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenuObject.SetActive(false);
+        sc = FindObjectOfType<SceneController>();
     }
 
     // Update is called once per frame
@@ -46,5 +49,17 @@ public class PauseMenu : MonoBehaviour
         quitMenu.SetActive(false);
         isPaused = false;
         Time.timeScale = 1.0f;
+    }
+
+    public void mainMenu()
+    {
+        if(!doOnce)
+        {
+            ResumeGame();
+            sc.DoTransition("MainMenu", MusicControl.MENU);
+            TutorialManager.instance.CheckTutorialStatus();
+            sc.starAmt = 0;
+            doOnce = true;
+        }
     }
 }

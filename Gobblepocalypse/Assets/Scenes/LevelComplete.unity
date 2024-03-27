@@ -341,9 +341,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 757817762, guid: efa37029309db1047a74f1abbec070cf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -188433937, guid: efa37029309db1047a74f1abbec070cf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1186,12 +1186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984e3878c058c3540b0a43beb0aeb0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: LEVEL2
   nextLevelMusicEnum: 1
   images:
   - {fileID: 830667669}
   - {fileID: 1964731747}
   - {fileID: 803522681}
+  nextlvlButton: {fileID: 1390393982}
 --- !u!1 &1953460512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,9 +1384,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1164771794, guid: efa37029309db1047a74f1abbec070cf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

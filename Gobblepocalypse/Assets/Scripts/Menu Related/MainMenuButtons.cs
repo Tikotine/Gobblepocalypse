@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
@@ -77,6 +73,7 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.LEVEL2:
                 Debug.Log("Load LEVEL 2");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+                sceneManager.DoTransition("LEVEL2", MusicControl.LEVEL1);
                 break;
 
             case ButtonType.LEVEL3:
