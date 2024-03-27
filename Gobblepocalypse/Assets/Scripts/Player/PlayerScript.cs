@@ -80,7 +80,6 @@ public class PlayerScript : MonoBehaviour
     //Audio
     [field: Header("Player Audio")]
     private EventInstance playerRoll;
-    private EventInstance playerCharge;
 
     // Start is called before the first frame update
     void Awake()
@@ -102,12 +101,13 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         playerRoll = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerRoll);     //Initalize instance for roll audio
-        playerCharge = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerCharge);     //Initalize instance for roll audio
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateSound();
+
         #region Shooting
         if (Input.GetKey(KeyCode.Mouse0) && !isCharging)   //If can shoot is true and left mouse is held
         {
@@ -149,9 +149,12 @@ public class PlayerScript : MonoBehaviour
 
         #endregion
 
-        UpdateSound();
-
         #region Charging
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isShooting)    //On Right click
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerCharge, transform.position);   //Play sound at player location
+        }
+
         if (Input.GetKey(KeyCode.Mouse1) && !isShooting)    //On right mouse hold
         {
             canShoot = false;
@@ -201,6 +204,7 @@ public class PlayerScript : MonoBehaviour
             {
                 if (charges < maxCharges)   //If charges is less than max amount
                 {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.playerCharge, transform.position);   //Play sound at player location
                     charges++;      //Add a charge
                     AudioManager.instance.PlayOneShot(FMODEvents.instance.playerGainCharge, transform.position);   //Play sound at collectable location
                     chargeTimer = 0;    //Reset timer
@@ -304,7 +308,6 @@ public class PlayerScript : MonoBehaviour
         chargingSlider.value = 0;
         chargingBar.SetActive(false);
         chargeParticlesObject.GetComponent<ParticleSystem>().Stop();
-        playerCharge.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void UpdateSound()
@@ -326,22 +329,6 @@ public class PlayerScript : MonoBehaviour
                 playerRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
-
-        if (isCharging)
-        {
-            //Get the playback state, we dont want it to play if it is already playing
-            PLAYBACK_STATE playbackState;
-            playerCharge.getPlaybackState(out playbackState);
-
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))   //If playback is currently stopped, play it
-            {
-                playerCharge.start();
-            }
-
-            else    //Else stop playback
-            {
-                playerCharge.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
-        }
+        
     }
 }
