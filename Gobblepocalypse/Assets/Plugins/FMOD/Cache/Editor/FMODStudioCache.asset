@@ -80,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 6416
+  Length: 982
 --- !u!114 &-8343857949929483764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638472490386928879
+  lastModified: 638472500578513610
   FileSizes:
   - Name: Desktop
-    Value: 240864
+    Value: 290912
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -436,7 +436,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638472490386928879
+  cacheTime: 638472500578513610
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
