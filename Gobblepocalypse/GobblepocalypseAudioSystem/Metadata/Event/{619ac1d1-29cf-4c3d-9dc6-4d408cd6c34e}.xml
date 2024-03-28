@@ -5,7 +5,7 @@
 			<value>PlayerAttackModeReady</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{89dbe11b-61a8-471c-96d2-64b40d299773}</destination>
@@ -84,7 +84,7 @@
 	</object>
 	<object class="MultiSound" id="{aec686ba-c34d-479e-a66c-381951ae7a18}">
 		<relationship name="sounds">
-			<destination>{559ca8a3-41db-4d9c-bbdf-b1217a4bafe1}</destination>
+			<destination>{bed5c2eb-5924-45ce-b902-ead66c03d315}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{5bfe7714-f57c-4442-bff6-146a0e6309b0}">
@@ -99,9 +99,9 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2e3ad521-de43-4358-a759-6e9cf9957c18}" />
-	<object class="SingleSound" id="{559ca8a3-41db-4d9c-bbdf-b1217a4bafe1}">
+	<object class="SingleSound" id="{bed5c2eb-5924-45ce-b902-ead66c03d315}">
 		<relationship name="audioFile">
-			<destination>{17049701-fb5e-4df1-bbb4-f450712317d1}</destination>
+			<destination>{5967e63a-26fb-4144-baf4-53292bc8b4a4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{92318f44-88dd-4973-a89f-d67ffd600ecb}" />
