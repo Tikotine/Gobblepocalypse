@@ -3,7 +3,6 @@ using UnityEngine;
 public class LevelComplete : MonoBehaviour
 {
     private SceneController sc;
-    public MusicControl nextLevelMusicEnum;
     public GameObject[] images;
     public GameObject nextlvlButton;
 
@@ -12,12 +11,11 @@ public class LevelComplete : MonoBehaviour
         sc = FindObjectOfType<SceneController>();
         showImgs();
         AudioManager.instance.PlayOneShot(FMODEvents.instance.levelComplete, transform.position);
+        checkIfLvl3();
     }
 
     private void showImgs()
     {
-        checkIfLvl3();
-
         if (sc.starAmt == 0)
         {
             //sadge
@@ -40,7 +38,7 @@ public class LevelComplete : MonoBehaviour
 
     public void nextLvl()
     {
-        sc.DoTransitionInt(sc.lastSceneBuildIndex+1, nextLevelMusicEnum);
+        sc.DoTransitionInt(sc.lastSceneBuildIndex+1, (MusicControl)(sc.lastSceneBuildIndex+1));
         sc.starAmt = 0;
     }
 
