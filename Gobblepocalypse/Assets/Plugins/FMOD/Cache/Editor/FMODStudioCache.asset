@@ -379,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638472321295539857
+  lastModified: 638472490386928879
   FileSizes:
   - Name: Desktop
-    Value: 196704
+    Value: 240864
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -436,7 +436,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638472321295539857
+  cacheTime: 638472490386928879
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -453,7 +453,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638471683695937604
+  lastModified: 638472490385814778
   FileSizes:
   - Name: Desktop
     Value: 2504
@@ -553,10 +553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Boss/BossAttack
   Guid:
-    Data1: 2056289470
-    Data2: 1332453221
-    Data3: 1653696646
-    Data4: -26855337
+    Data1: -656308811
+    Data2: 1128048208
+    Data3: -181161809
+    Data4: -151232439
   Banks:
   - {fileID: -972065946555918996}
   IsStream: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638471683695932565
+  lastModified: 638472490385804286
   FileSizes:
   - Name: Desktop
     Value: 1486

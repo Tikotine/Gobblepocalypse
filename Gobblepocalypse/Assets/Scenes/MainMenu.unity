@@ -21689,19 +21689,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Guid.Data1
-      value: 2056289470
+      value: -656308811
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Guid.Data2
-      value: 1332453221
+      value: 1128048208
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Guid.Data3
-      value: 1653696646
+      value: -181161809
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Guid.Data4
-      value: -26855337
+      value: -151232439
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossCharge>k__BackingField.Guid.Data1
