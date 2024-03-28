@@ -8,7 +8,9 @@ using System;
 public enum MusicControl
 {
     MENU = 0,
-    LEVEL1 = 1
+    LEVEL1 = 1,
+    LEVEL2 = 2,
+    LEVEL3 = 3
 }
 
 public class AudioManager : MonoBehaviour

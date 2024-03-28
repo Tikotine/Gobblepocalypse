@@ -22083,39 +22083,39 @@ PrefabInstance:
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 7fb39cae0decfd744beae6ba75480ca0, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 72de94778a35a634096f26a56fe40a61, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: babb4bb7aa22749409a05825ee09e261, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 7fb39cae0decfd744beae6ba75480ca0, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[4]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 72de94778a35a634096f26a56fe40a61, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[5]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: babb4bb7aa22749409a05825ee09e261, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[6]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 7fb39cae0decfd744beae6ba75480ca0, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[7]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: 72de94778a35a634096f26a56fe40a61, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPrefabs.Array.data[8]
       value: 
-      objectReference: {fileID: 3742229135689602290, guid: 226869f049f5eab4eaafc668170f935a, type: 3}
+      objectReference: {fileID: 3742229135689602290, guid: babb4bb7aa22749409a05825ee09e261, type: 3}
     - target: {fileID: 4675250664307877459, guid: 89877a8c30e15074790c0ebc1643e4d8, type: 3}
       propertyPath: menuStarsPlaceholders.Array.size
       value: 9
