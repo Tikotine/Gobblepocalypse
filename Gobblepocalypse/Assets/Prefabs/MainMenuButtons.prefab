@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.36}
+  m_AnchoredPosition: {x: -960.03, y: -539.1516}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6755952673701861059
@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -352,6 +352,8 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 6755952675023732971}
   - {fileID: 6755952674402678783}
@@ -392,7 +394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.61847}
+  m_AnchoredPosition: {x: -960.03, y: -539.5501}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6755952674209865821
@@ -425,8 +427,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SETTINGS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -754,6 +756,8 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 6755952675023732971}
   - {fileID: 6755952674402678783}
@@ -1021,6 +1025,8 @@ MonoBehaviour:
   maxPushForce: 600
   minPushForce: 1000
   pushForce: {x: 0, y: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
   menuButtons:
   - {fileID: 6755952675023732971}
   - {fileID: 6755952674402678783}
@@ -1061,7 +1067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.62836}
+  m_AnchoredPosition: {x: -960.03, y: -539.56}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6755952675553205754
@@ -1094,8 +1100,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

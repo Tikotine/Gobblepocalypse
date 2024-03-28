@@ -79,6 +79,7 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.LEVEL3:
                 Debug.Log("Load LEVEL 3");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+                sceneManager.DoTransition("LEVEL3", MusicControl.LEVEL1);
                 break;
 
             case ButtonType.PLAYBACK:

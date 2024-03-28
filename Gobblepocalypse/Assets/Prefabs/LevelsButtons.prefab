@@ -304,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.62836}
+  m_AnchoredPosition: {x: -960.03, y: -539.56}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737109378983218123
@@ -337,8 +337,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BACK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -489,8 +489,6 @@ MonoBehaviour:
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
-  transition: {fileID: 0}
-  transitionTime: 0
 --- !u!1 &3737109379123369909
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.62836}
+  m_AnchoredPosition: {x: -960.03, y: -539.56}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737109379163035132
@@ -660,15 +658,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEVEL 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287841791
+  m_fontColor: {r: 1, g: 0.2688679, b: 0.5745249, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -691,7 +689,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -762,7 +760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.61847}
+  m_AnchoredPosition: {x: -960.03, y: -539.5501}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737109379210191424
@@ -795,15 +793,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEVEL 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287841791
+  m_fontColor: {r: 1, g: 0.2688679, b: 0.5745249, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -826,7 +824,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -981,7 +979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960.03, y: -539.61847}
+  m_AnchoredPosition: {x: -960.03, y: -539.5501}
   m_SizeDelta: {x: 4.0646, y: 1.2875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737109379598263545
@@ -1014,15 +1012,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: LEVEL 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
+  m_sharedMaterial: {fileID: 6275320903218388607, guid: 300f9ec66e3c5eb4caec9fc518939e10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287841791
+  m_fontColor: {r: 1, g: 0.2688679, b: 0.5745249, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1045,7 +1043,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1223,8 +1221,6 @@ MonoBehaviour:
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
-  transition: {fileID: 0}
-  transitionTime: 1
 --- !u!1 &3737109379757714010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,8 +1407,6 @@ MonoBehaviour:
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
-  transition: {fileID: 0}
-  transitionTime: 1
 --- !u!1 &3737109380084817813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,8 +1593,6 @@ MonoBehaviour:
   - {fileID: 3737109380164447399}
   - {fileID: 3737109379061820852}
   mainMenuManagerObject: {fileID: 0}
-  transition: {fileID: 0}
-  transitionTime: 1
 --- !u!1 &3737109380502501671
 GameObject:
   m_ObjectHideFlags: 0
