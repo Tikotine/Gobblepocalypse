@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{c70aa518-d19c-484e-a355-f56a926062f3}">
 		<property name="assetPath">
-			<value>Test/TBC/Player_Shoot.wav</value>
+			<value>Test/TBC/Player_AttackActivate.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
