@@ -44,7 +44,7 @@ Material:
     - _Spread: 6.9
     m_Colors:
     - _BottomColour: {r: 0, g: 0, b: 0, a: 1}
-    - _TopColour: {r: 0.9960785, g: 0.70980394, b: 0.3647059, a: 1}
+    - _TopColour: {r: 0.62352943, g: 0.0627451, b: 0.0627451, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &131662896107504864
 MonoBehaviour:
