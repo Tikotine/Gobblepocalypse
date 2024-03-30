@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,6 +23,9 @@ public class Head : MonoBehaviour
     public Sprite[] bossHeadSprites; //0 chase, 1 pre, 2 atk
     private SpriteRenderer sr;
 
+    //Audio/FMOD
+    private StudioEventEmitter emitter;
+
     private void Start()
     {
         boss = GetComponentInParent<Boss>();
@@ -29,6 +33,8 @@ public class Head : MonoBehaviour
         cm = FindObjectOfType<CheckpointManager>();
         ps = FindObjectOfType<PlayerScript>();
         sr = GetComponent<SpriteRenderer>();
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.bossMovement, gameObject);    //Initialise the collectableIdle event at this gameobject
+        emitter.Play();     //Start playing the audio
     }
 
     private void FixedUpdate()

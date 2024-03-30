@@ -68,19 +68,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Boss/BossMovement
   Guid:
-    Data1: -221012446
-    Data2: 1216078706
-    Data3: 194775973
-    Data4: 706251460
+    Data1: 1832333250
+    Data2: 1084035342
+    Data3: 1242222242
+    Data4: 1839985444
   Banks:
   - {fileID: -972065946555918996}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 982
+  Length: 8266
 --- !u!114 &-8343857949929483764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638474425297397293
+  lastModified: 638474452666349893
   FileSizes:
   - Name: Desktop
-    Value: 355520
+    Value: 382080
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -437,7 +437,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638474425297397293
+  cacheTime: 638474452666349893
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -454,7 +454,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638474423202648361
+  lastModified: 638474445027033636
   FileSizes:
   - Name: Desktop
     Value: 2550
@@ -674,7 +674,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 6416
+  Length: 1600
 --- !u!114 &5435842189573272473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638474423202636809
+  lastModified: 638474445027028530
   FileSizes:
   - Name: Desktop
     Value: 1486

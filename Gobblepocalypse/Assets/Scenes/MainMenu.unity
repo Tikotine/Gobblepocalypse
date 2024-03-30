@@ -21782,19 +21782,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossMovement>k__BackingField.Guid.Data1
-      value: -221012446
+      value: 1832333250
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossMovement>k__BackingField.Guid.Data2
-      value: 1216078706
+      value: 1084035342
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossMovement>k__BackingField.Guid.Data3
-      value: 194775973
+      value: 1242222242
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossMovement>k__BackingField.Guid.Data4
-      value: 706251460
+      value: 1839985444
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <playerCharge>k__BackingField.Guid.Data1
