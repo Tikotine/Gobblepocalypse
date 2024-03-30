@@ -96,6 +96,8 @@ public class PlayerScript : MonoBehaviour
 
         attackTextCooldown.gameObject.SetActive(false); //Hide cooling down UI
         attackUICooldown.fillAmount = 0.0f;
+
+        //pf.changeFace(4);
     }
 
     private void Start()
@@ -159,7 +161,7 @@ public class PlayerScript : MonoBehaviour
         {
             canShoot = false;
             chargeTimerActive = true;       //Toggle all booleans
-            pf.changeFace(3);
+            pf.changeFace(0);
             if (isAttacking != true)
             {
                 sr.color = chargingColour;
