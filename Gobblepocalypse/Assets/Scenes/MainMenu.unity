@@ -15616,7 +15616,7 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0, z: 0}
   mouseDistance: {x: 0, y: 0}
   downwardForce: {x: 0, y: -0.5, z: 0}
-  feetCol: {fileID: 0}
+  feetCol: {fileID: 1061070202}
   groundLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -15718,7 +15718,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9490196, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

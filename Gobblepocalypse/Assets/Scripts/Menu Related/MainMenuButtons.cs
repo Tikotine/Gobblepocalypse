@@ -26,6 +26,7 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject mainMenuManagerObject;
     private MainMenuManager mainMenuManagerScript;
     private SceneController sceneManager;
+    private bool doOnce = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class MainMenuButtons : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerScript>();
         sceneManager = FindObjectOfType<SceneController>();
+        doOnce = false;
     }
 
     // Update is called once per frame
@@ -46,9 +48,10 @@ public class MainMenuButtons : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && playerScript.isAttacking)
+        if (collision.gameObject.tag == "Player" && playerScript.isAttacking && !doOnce)
         {
             PlayButton(buttonType);
+            doOnce = true;
         }
     }
 
@@ -66,7 +69,6 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
-                //StartCoroutine(DoTransition("Jme Scene", MusicControl.LEVEL1));
                 sceneManager.DoTransition("LEVEL1", MusicControl.LEVEL1);
                 break;
 
@@ -121,6 +123,7 @@ public class MainMenuButtons : MonoBehaviour
                 Debug.LogWarning("Button type not supported: " + buttonType);
                 break;
         }
+        doOnce = false;
     }
 
     public void RemoveMenu()
