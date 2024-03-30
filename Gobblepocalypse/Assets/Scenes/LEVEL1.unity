@@ -9841,7 +9841,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9490196, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9913,7 +9913,7 @@ MonoBehaviour:
   chargingColour: {r: 0, g: 0.7058824, b: 0.9529412, a: 1}
   attackingColour: {r: 1, g: 0, b: 0, a: 1}
   attackCooldownColor: {r: 0.254717, g: 0.14588337, b: 0, a: 1}
-  defaultColour: {r: 1, g: 1, b: 1, a: 1}
+  defaultColour: {r: 1, g: 0.9490197, b: 0, a: 1}
   buttonDefaultColour: {r: 0.8705883, g: 0.5019608, b: 0, a: 1}
   collisionParticlesObject: {fileID: 1415901549577536973, guid: 24858a65ddd256247855d451c09ffa88, type: 3}
   chargeParticlesObject: {fileID: 226905761}
