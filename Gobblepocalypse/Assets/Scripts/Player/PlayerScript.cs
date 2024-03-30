@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using FMOD.Studio;
 using FMODUnity;
+using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     public BoxCollider2D feetCol;
     public LayerMask groundLayers;
-    private PlayerFace pf;
+    public PlayerFace pf;
 
     //Line
     [field: Header("Line References")]

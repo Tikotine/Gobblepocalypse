@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerFace : MonoBehaviour
 {
     public SpriteRenderer sr;
-    public Sprite[] faces; //0 slp, 1 shoot, 2 atk, 3 charging?, 4 asd?
+    public Sprite[] faces; //0 slp, 1 shoot, 2 atk, 3 charging?, 4 default
 
     private void Start()
     {
