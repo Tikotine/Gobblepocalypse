@@ -18,6 +18,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Transition SFX")]
     [field: SerializeField] public EventReference transitionSound { get; private set; }
+    [field: SerializeField] public EventReference transitionOutSound { get; private set; }
 
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerRoll { get; private set; }

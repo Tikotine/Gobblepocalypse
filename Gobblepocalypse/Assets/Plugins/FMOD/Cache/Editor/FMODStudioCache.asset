@@ -379,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638473297164365187
+  lastModified: 638474425297397293
   FileSizes:
   - Name: Desktop
-    Value: 347008
+    Value: 355520
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -431,12 +431,13 @@ MonoBehaviour:
   - {fileID: 7013254661881642407}
   - {fileID: 5834988046917566238}
   - {fileID: 4227041969051614881}
+  - {fileID: 7366658672781079933}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638473297164365187
+  cacheTime: 638474425297397293
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
@@ -453,10 +454,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638472490385814778
+  lastModified: 638474423202648361
   FileSizes:
   - Name: Desktop
-    Value: 2504
+    Value: 2550
   Exists: 1
 --- !u!114 &1235333264961026300
 MonoBehaviour:
@@ -853,7 +854,7 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638472490385804286
+  lastModified: 638474423202636809
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -876,6 +877,33 @@ MonoBehaviour:
     Data2: 1309261013
     Data3: -630972536
     Data4: 1589818996
+  Banks:
+  - {fileID: -972065946555918996}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7366658672781079933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Stuff/TransitionOut
+  m_EditorClassIdentifier: 
+  Path: event:/Level Stuff/TransitionOut
+  Guid:
+    Data1: -543808851
+    Data2: 1084853167
+    Data3: -2029265506
+    Data4: 2114518336
   Banks:
   - {fileID: -972065946555918996}
   IsStream: 0

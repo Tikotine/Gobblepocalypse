@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     public int starAmt;
     public int lastSceneBuildIndex;
     private static SceneController Instance;
+    private GameObject player;
 
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
+
     public void DoTransition(string sceneName, MusicControl mc)
     {
         StartCoroutine(Do(sceneName, mc));
@@ -31,10 +37,32 @@ public class SceneController : MonoBehaviour
 
     IEnumerator Do(string sceneName, MusicControl mc)
     {
+        player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionSound, player.transform.position);
+        }
+
+        else 
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionSound, transform.position);
+        }
+
         transition.SetTrigger("Start");
         Scene s = SceneManager.GetActiveScene();
         lastSceneBuildIndex = s.buildIndex;
         yield return new WaitForSeconds(transitionTime);
+
+        if (player != null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionOutSound, player.transform.position);
+        }
+
+        else 
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionOutSound, transform.position);
+        }
         AudioManager.SetMusicControl(mc);
         SceneManager.LoadScene(sceneName);
     }
@@ -46,10 +74,12 @@ public class SceneController : MonoBehaviour
 
     IEnumerator DoInt(int sceneIndex, MusicControl mc)
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionSound, transform.position);
         transition.SetTrigger("Start");
         Scene s = SceneManager.GetActiveScene();
         lastSceneBuildIndex = s.buildIndex;
         yield return new WaitForSeconds(transitionTime);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.transitionOutSound, transform.position);
         AudioManager.SetMusicControl(mc);
         SceneManager.LoadScene(sceneIndex);
     }

@@ -10179,7 +10179,7 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0, z: 0}
   mouseDistance: {x: 0, y: 0}
   downwardForce: {x: 0, y: -0.5, z: 0}
-  feetCol: {fileID: 0}
+  feetCol: {fileID: 194838006}
   groundLayers:
     serializedVersion: 2
     m_Bits: 128

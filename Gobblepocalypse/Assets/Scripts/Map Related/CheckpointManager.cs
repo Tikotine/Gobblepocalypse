@@ -44,17 +44,8 @@ public class CheckpointManager : MonoBehaviour
         {
             for (int i = 0; i < checkpointWaypoints.Length; i++)  //For every prefab in the array
             {
-                if (i == 0) //If first checkpoint, set spawn to beginning
-                {
-                    checkpointPos[i].x = -0f;
-                    checkpointPos[i].y = -0f;
-                }
-
-                else  //Else set spawnpoint to the checkpoint waypoint
-                {
                     checkpointPos[i].x = checkpointWaypoints[i].transform.position.x;
                     checkpointPos[i].y = checkpointWaypoints[i].transform.position.y;
-                }
             }
 
             if (collectablesOnScreen != null)   //If there are collectables
