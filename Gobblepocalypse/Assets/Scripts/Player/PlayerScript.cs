@@ -192,7 +192,6 @@ public class PlayerScript : MonoBehaviour
 
         if (isCharging == true && Input.GetKeyUp(KeyCode.Mouse1))   //On right mouse release
         {
-            canShoot = true;
             isCharging = false;
             chargeTimerActive = false;
             chargeTimer = 0;    //Reset charge timer

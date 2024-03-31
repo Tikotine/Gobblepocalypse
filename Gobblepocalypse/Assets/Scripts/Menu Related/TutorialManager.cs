@@ -72,13 +72,11 @@ public class TutorialManager : MonoBehaviour
     {
         if (!hasRightClicked && Input.GetKeyDown(KeyCode.Mouse1))
         {
-            hasRightClicked = true;
             Invoke("FinishRightClickTutorial", 2f);
         }
 
         if (!hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            hasLeftClicked = true;
             Invoke("FinishLeftClickTutorial", 2f);
         }
 
@@ -90,23 +88,26 @@ public class TutorialManager : MonoBehaviour
 
     public void FinishRightClickTutorial()
     {
+        hasRightClicked = true;
         rightClick.SetActive(false);
         leftClick.SetActive(true);
     }
 
     public void FinishLeftClickTutorial()
     {
+        hasPressedSpace = false;
+        hasLeftClicked = true;
         leftClick.SetActive(false);
         cooldown.SetActive(false);
-        spacebar.SetActive(true);
+        spacebar.SetActive(true);    
     }
 
     public void FinishPressSpaceTutorial()
     {
         if (!disableTutorial)
         {
-            dummyHolder = Instantiate(dummyPrefab, dummyLocation, Quaternion.identity);
             hasPressedSpace = true;
+            dummyHolder = Instantiate(dummyPrefab, dummyLocation, Quaternion.identity);
             spacebar.SetActive(false);
             active.SetActive(true);
             Invoke("FinishAttackTutorial", 5f);
@@ -121,7 +122,6 @@ public class TutorialManager : MonoBehaviour
             active.SetActive(false);
             cooldown.SetActive(true);
             Invoke("FinishLeftClickTutorial", 3f);
-            hasPressedSpace = false;
         }
     }
 
@@ -131,6 +131,9 @@ public class TutorialManager : MonoBehaviour
         colourTransition = true;
         cooldown.SetActive(false);
         active.SetActive(false);
+        leftClick.SetActive(false);
+        rightClick.SetActive(false);
+        spacebar.SetActive(false);
         GameObject.FindWithTag("MainMenuManager").GetComponent<MainMenuManager>().SpawnMainMenu();
     }
 
