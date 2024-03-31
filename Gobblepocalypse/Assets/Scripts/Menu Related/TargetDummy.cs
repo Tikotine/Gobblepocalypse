@@ -25,11 +25,10 @@ public class TargetDummy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            TutorialManager.instance.disableTutorial = true;
             YeetBoss();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playerBossInterrupt, collision.transform.position);   //Play sound at collectable location
             AudioManager.instance.PlayOneShot(FMODEvents.instance.bossInterrupted, transform.position);   //Play sound at collectable location
-            Invoke("DelayFinishTutorial", 3f);
+            TutorialManager.instance.SpawnColourTutorial();
         }
     }
 
@@ -42,7 +41,7 @@ public class TargetDummy : MonoBehaviour
 
     private void DelayFinishTutorial()
     { 
-        TutorialManager.instance.FinishTutorial();
+        TutorialManager.instance.SpawnColourTutorial();
         Destroy(this);
     }
 }

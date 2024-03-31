@@ -327,10 +327,11 @@ MonoBehaviour:
   active: {fileID: 4221730868791556427}
   cooldown: {fileID: 4221730869009222129}
   dummyPrefab: {fileID: 4062892510315126879, guid: 6df3ec7af2eca344f8e00d40f401c8c3, type: 3}
+  slider: {fileID: 0}
+  colourGrid: {fileID: 0}
+  tutorialCollectable: {fileID: 6121460155298653260, guid: 8acec076e58560d47ad5bfe4dee12e66, type: 3}
+  colourTutorialPrefab: {fileID: 3131315966756705145, guid: 9040cb7ac6649a9429090a469a04fd63, type: 3}
   dummyLocation: {x: -12.66, y: -4.26, z: 0}
-  hasRightClicked: 0
-  hasLeftClicked: 0
-  hasPressedSpace: 0
   disableTutorial: 0
   colourTransition: 0
   time: 1

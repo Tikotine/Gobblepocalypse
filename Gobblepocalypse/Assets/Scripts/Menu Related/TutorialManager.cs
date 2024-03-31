@@ -20,10 +20,16 @@ public class TutorialManager : MonoBehaviour
     public GameObject cooldown;
     public GameObject dummyPrefab;
     private GameObject dummyHolder;
+    public GameObject slider;
+    public GameObject colourGrid;
+    public GameObject tutorialCollectable;
+    public GameObject colourTutorialPrefab;
+    private GameObject colourTut;
     public Vector3 dummyLocation;
     private bool hasRightClicked;
     private bool hasLeftClicked;
     private bool hasPressedSpace;
+    private bool reachedColourTutorial;
     public bool disableTutorial;
 
     [Header("Background Colour")]
@@ -72,57 +78,85 @@ public class TutorialManager : MonoBehaviour
     {
         if (!hasRightClicked && Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Invoke("FinishRightClickTutorial", 2f);
+            Invoke("SpawnLeftClickTutorial", 2f);
         }
 
         if (!hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Invoke("FinishLeftClickTutorial", 2f);
+            Invoke("SpawnSpacebarTutorial", 2f);
         }
 
-        if (!hasPressedSpace && hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Space))
+        if (!hasPressedSpace && hasLeftClicked && hasRightClicked && Input.GetKeyDown(KeyCode.Space) && !reachedColourTutorial)
         {
-            FinishPressSpaceTutorial();
+            SpawnTargetDummy();
         }
     }
 
-    public void FinishRightClickTutorial()
+    public void SpawnLeftClickTutorial()
     {
         hasRightClicked = true;
         rightClick.SetActive(false);
         leftClick.SetActive(true);
     }
 
-    public void FinishLeftClickTutorial()
+    public void SpawnSpacebarTutorial()
     {
-        hasPressedSpace = false;
-        hasLeftClicked = true;
-        leftClick.SetActive(false);
+        if (!disableTutorial)
+        {
+            if (!reachedColourTutorial)
+            {
+                hasPressedSpace = false;
+                hasLeftClicked = true;
+                leftClick.SetActive(false);
+                cooldown.SetActive(false);
+                spacebar.SetActive(true);
+            }
+
+        }
+    }
+
+    public void SpawnTargetDummy()
+    {
+        if (!disableTutorial)
+        {
+            if (!reachedColourTutorial)
+            {
+                hasPressedSpace = true;
+                dummyHolder = Instantiate(dummyPrefab, dummyLocation, Quaternion.identity);
+                spacebar.SetActive(false);
+                active.SetActive(true);
+                Invoke("SpawnCooldownTutorial", 5f);
+            }
+        }
+    }
+
+    public void SpawnCooldownTutorial()
+    {
+        if (!disableTutorial)
+        {
+            if (!reachedColourTutorial)
+            {
+                Destroy(dummyHolder);
+                active.SetActive(false);
+                cooldown.SetActive(true);
+                Invoke("SpawnSpacebarTutorial", 3f);
+            }
+
+        }
+    }
+
+    public void SpawnColourTutorial()
+    {
+        reachedColourTutorial = true;
+        active.SetActive(false);
         cooldown.SetActive(false);
-        spacebar.SetActive(true);    
-    }
+        spacebar.SetActive(false);
 
-    public void FinishPressSpaceTutorial()
-    {
-        if (!disableTutorial)
-        {
-            hasPressedSpace = true;
-            dummyHolder = Instantiate(dummyPrefab, dummyLocation, Quaternion.identity);
-            spacebar.SetActive(false);
-            active.SetActive(true);
-            Invoke("FinishAttackTutorial", 5f);
-        }
-    }
+        slider.SetActive(true);
+        colourGrid.SetActive(true);
+        tutorialCollectable.SetActive(true);
+        colourTut = Instantiate(colourTutorialPrefab, new Vector3(0, 0, 0), Quaternion.identity);
 
-    public void FinishAttackTutorial()
-    {
-        if (!disableTutorial)
-        {
-            Destroy(dummyHolder);
-            active.SetActive(false);
-            cooldown.SetActive(true);
-            Invoke("FinishLeftClickTutorial", 3f);
-        }
     }
 
     public void FinishTutorial()
@@ -134,6 +168,9 @@ public class TutorialManager : MonoBehaviour
         leftClick.SetActive(false);
         rightClick.SetActive(false);
         spacebar.SetActive(false);
+        slider.SetActive(false);
+        colourGrid.SetActive(false);
+        Destroy(colourTut);
         GameObject.FindWithTag("MainMenuManager").GetComponent<MainMenuManager>().SpawnMainMenu();
     }
 
