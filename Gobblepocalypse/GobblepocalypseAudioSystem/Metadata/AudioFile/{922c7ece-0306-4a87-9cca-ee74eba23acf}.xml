@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{922c7ece-0306-4a87-9cca-ee74eba23acf}">
 		<property name="assetPath">
-			<value>Test/SFX/Player/footsteps_player_wood_04.ogg</value>
+			<value>Test/SFX/Player/Player_Footsteps_4.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
