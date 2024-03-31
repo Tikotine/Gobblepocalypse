@@ -109,6 +109,16 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (groundContact)
+        {
+            Debug.Log("GC True");
+        }
+
+        if (!groundContact)
+        {
+            Debug.Log("GC False");
+        }
+
         UpdateSound();
 
         #region Shooting
@@ -331,7 +341,6 @@ public class PlayerScript : MonoBehaviour
             {
                 playerRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
-        }
-        
+        }     
     }
 }

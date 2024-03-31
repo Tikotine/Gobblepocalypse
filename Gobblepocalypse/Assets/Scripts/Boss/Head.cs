@@ -11,6 +11,7 @@ public class Head : MonoBehaviour
 
     private CheckpointManager cm;
     private PlayerScript ps;
+    private SceneController sc;
 
     //Walls
     public Sticky solidSticky;
@@ -33,6 +34,7 @@ public class Head : MonoBehaviour
         cm = FindObjectOfType<CheckpointManager>();
         ps = FindObjectOfType<PlayerScript>();
         sr = GetComponent<SpriteRenderer>();
+        sc = FindObjectOfType<SceneController>();
         emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.bossMovement, gameObject);    //Initialise the collectableIdle event at this gameobject
         emitter.Play();     //Start playing the audio
     }
@@ -90,14 +92,10 @@ public class Head : MonoBehaviour
             {
                 //if in preatk state false
                 Debug.Log("player hit by boss");
-                ResetStickyPlatforms();     //Unstick from platforms
-                cm.MoveToCheckpoint();      //Move Player to checkpoint
-                cm.RetryColelctablesReset();    //Reset Collectables
-                cm.BossCheckpointReset();   //Reset boss to last checkpoint
-                ps.ResetTimers();   //Reset attackmode timers
-                boss.SetCurrentState(new BossChase(boss));
-                ps.ResetVelocity(); //Reset player velocity
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDeath, ps.transform.position);   //Play sound at boss location
+                ps.gameObject.SetActive(false);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDeath, cm.player.transform.position);   //Play sound at player location
+                sc.transition.SetTrigger("Start");
+                Invoke("Death", 1f);
             }
         }
     }
@@ -142,5 +140,17 @@ public class Head : MonoBehaviour
     {
         //hide UI
         BossUI.SetActive(false);
+    }
+
+    private void Death()
+    {
+        ResetStickyPlatforms();     //Unstick from platforms
+        cm.MoveToCheckpoint();      //Move Player to checkpoint
+        cm.RetryColelctablesReset();    //Reset Collectables
+        cm.BossCheckpointReset();   //Reset boss to last checkpoint
+        ps.ResetTimers();   //Reset attackmode timers
+        boss.SetCurrentState(new BossChase(boss));
+        ps.ResetVelocity(); //Reset player velocity
+        ps.gameObject.SetActive(true);
     }
 }
