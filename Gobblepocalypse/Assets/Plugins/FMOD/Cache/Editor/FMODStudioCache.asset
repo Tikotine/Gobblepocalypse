@@ -74,13 +74,13 @@ MonoBehaviour:
     Data4: 1839985444
   Banks:
   - {fileID: -972065946555918996}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 8266
+  Length: 3400
 --- !u!114 &-8343857949929483764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,10 +379,10 @@ MonoBehaviour:
   Path: GobblepocalypseAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638474452666349893
+  lastModified: 638474967887545622
   FileSizes:
   - Name: Desktop
-    Value: 382080
+    Value: 965856
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -437,7 +437,7 @@ MonoBehaviour:
   - {fileID: 6452087251598316505}
   StringsBanks:
   - {fileID: 589352567422326176}
-  cacheTime: 638474452666349893
+  cacheTime: 638474967887545622
   cacheVersion: 131616
 --- !u!114 &589352567422326176
 MonoBehaviour:
