@@ -23,6 +23,8 @@ public class EndZone : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             checkScene(SceneManager.GetActiveScene().name);
             sc.starAmt = starCount;
             sc.DoTransition(sceneName, musicEnum);

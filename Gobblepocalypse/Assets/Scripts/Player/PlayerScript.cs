@@ -343,4 +343,9 @@ public class PlayerScript : MonoBehaviour
             }
         }     
     }
+
+    private void OnDestroy()
+    {
+        playerRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }

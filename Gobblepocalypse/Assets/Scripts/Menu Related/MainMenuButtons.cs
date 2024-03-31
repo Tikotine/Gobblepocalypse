@@ -69,18 +69,30 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.LEVEL1:
                 Debug.Log("Load LEVEL 1");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+                foreach (GameObject e in menuButtons)
+                { 
+                    e.GetComponent<BoxCollider2D>().enabled = false;
+                }
                 sceneManager.DoTransition("LEVEL1", MusicControl.LEVEL1);
                 break;
 
             case ButtonType.LEVEL2:
                 Debug.Log("Load LEVEL 2");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+                foreach (GameObject e in menuButtons)
+                {
+                    e.GetComponent<BoxCollider2D>().enabled = false;
+                }
                 sceneManager.DoTransition("LEVEL2", MusicControl.LEVEL2);
                 break;
 
             case ButtonType.LEVEL3:
                 Debug.Log("Load LEVEL 3");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+                foreach (GameObject e in menuButtons)
+                {
+                    e.GetComponent<BoxCollider2D>().enabled = false;
+                }
                 sceneManager.DoTransition("LEVEL3", MusicControl.LEVEL3);
                 break;
 

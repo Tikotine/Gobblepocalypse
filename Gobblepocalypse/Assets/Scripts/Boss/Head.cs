@@ -153,4 +153,9 @@ public class Head : MonoBehaviour
         ps.ResetVelocity(); //Reset player velocity
         ps.gameObject.SetActive(true);
     }
+
+    private void OnDestroy()
+    {
+        emitter.Stop();     //Start playing the audio
+    }
 }
