@@ -170,6 +170,10 @@ public class TutorialManager : MonoBehaviour
         spacebar.SetActive(false);
         slider.SetActive(false);
         colourGrid.SetActive(false);
+        if (tutorialCollectable != null)
+        {
+            tutorialCollectable.SetActive(false);
+        }
         Destroy(colourTut);
         GameObject.FindWithTag("MainMenuManager").GetComponent<MainMenuManager>().SpawnMainMenu();
     }

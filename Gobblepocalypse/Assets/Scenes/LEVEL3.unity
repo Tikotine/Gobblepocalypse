@@ -119260,8 +119260,8 @@ MonoBehaviour:
   canMove: 1
   thrownPlayer: 0
   currentMoveSpeed: 0
-  normalMoveSpeed: 0.008
-  fastMoveSpeed: 5
+  normalMoveSpeed: 0.012
+  fastMoveSpeed: 7
   maxDistance: 1500
   preAtkDuration: 3
   preAtkInterval: 7

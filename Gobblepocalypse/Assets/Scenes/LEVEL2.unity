@@ -87322,7 +87322,7 @@ MonoBehaviour:
   canMove: 1
   thrownPlayer: 0
   currentMoveSpeed: 0
-  normalMoveSpeed: 0.008
+  normalMoveSpeed: 0.01
   fastMoveSpeed: 6
   maxDistance: 1500
   preAtkDuration: 3
