@@ -11,11 +11,13 @@ public class EndZone : MonoBehaviour
     public string sceneName;
     public MusicControl musicEnum;
     private int starCount;
+    private TimerScript ts;
 
     private void Start()
     {
         sc = FindObjectOfType<SceneController>();
         sm = FindObjectOfType<StarManager>();
+        ts = FindObjectOfType<TimerScript>();
         starCount = 0;
     }
 
@@ -27,6 +29,7 @@ public class EndZone : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             checkScene(SceneManager.GetActiveScene().name);
             sc.starAmt = starCount;
+            ts.endTimer();
             sc.DoTransition(sceneName, musicEnum);
         }
     }

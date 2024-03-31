@@ -11,6 +11,14 @@ public class SceneController : MonoBehaviour
     private static SceneController Instance;
     private GameObject player;
 
+    public float Lvl1time;
+    public float Lvl1Best;
+    public float Lvl2time;
+    public float Lvl2Best;
+    public float Lvl3time;
+    public float Lvl3Best;
+    public bool NewBest = false;
+
     private void Awake()
     {
         transition = GetComponentInChildren<Animator>();
