@@ -74,6 +74,7 @@ public class MainMenuButtons : MonoBehaviour
                     e.GetComponent<BoxCollider2D>().enabled = false;
                 }
                 sceneManager.DoTransition("LEVEL1", MusicControl.LEVEL1);
+                AudioManager.instance.InitializeAmbience(FMODEvents.instance.ambience1);
                 break;
 
             case ButtonType.LEVEL2:
@@ -84,6 +85,7 @@ public class MainMenuButtons : MonoBehaviour
                     e.GetComponent<BoxCollider2D>().enabled = false;
                 }
                 sceneManager.DoTransition("LEVEL2", MusicControl.LEVEL2);
+                AudioManager.instance.InitializeAmbience(FMODEvents.instance.ambience2);
                 break;
 
             case ButtonType.LEVEL3:
@@ -94,6 +96,7 @@ public class MainMenuButtons : MonoBehaviour
                     e.GetComponent<BoxCollider2D>().enabled = false;
                 }
                 sceneManager.DoTransition("LEVEL3", MusicControl.LEVEL3);
+                AudioManager.instance.StopAmbience();
                 break;
 
             case ButtonType.PLAYBACK:

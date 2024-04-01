@@ -14204,7 +14204,7 @@ GameObject:
   - component: {fileID: 1390972226}
   m_Layer: 7
   m_Name: Level
-  m_TagString: Untagged
+  m_TagString: SolidPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23252,6 +23252,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1117944533}
     - target: {fileID: 4221730868833787518, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
+      propertyPath: disableTutorial
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221730868833787518, guid: ea4af1c33156d81459fe431a15565fe7, type: 3}
       propertyPath: tutorialCollectable
       value: 
       objectReference: {fileID: 1891178685}
@@ -23381,6 +23385,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <ambience2>k__BackingField.Path
+      value: event:/Ambience/Ambience2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossAttack>k__BackingField.Path
       value: event:/SFX/Boss/BossAttack
       objectReference: {fileID: 0}
@@ -23411,6 +23419,22 @@ PrefabInstance:
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <levelComplete>k__BackingField.Path
       value: event:/Level Stuff/LevelComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <ambience2>k__BackingField.Guid.Data1
+      value: 405121975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <ambience2>k__BackingField.Guid.Data2
+      value: 1173674879
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <ambience2>k__BackingField.Guid.Data3
+      value: -2035085677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
+      propertyPath: <ambience2>k__BackingField.Guid.Data4
+      value: -507107147
       objectReference: {fileID: 0}
     - target: {fileID: 6119764834014176434, guid: 7ed52111bb01c6b43b944730439d1cdf, type: 3}
       propertyPath: <bossInterrupted>k__BackingField.Path

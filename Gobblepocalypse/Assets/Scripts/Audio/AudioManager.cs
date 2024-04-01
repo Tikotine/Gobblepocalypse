@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
     public List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
-    private EventInstance ambienceEventInstance;
+    public EventInstance ambienceEventInstance;
     public static EventInstance musicEventInstance;
 
     private void Awake()
@@ -90,10 +90,20 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start();
     }
 
-    private void InitializeAmbience(EventReference ambienceEventReference)
+    public void InitializeAmbience(EventReference ambienceEventReference)
     { 
         ambienceEventInstance = CreateEventInstance(ambienceEventReference);    //Initialize by calling the create function
         ambienceEventInstance.start();      
+    }
+
+    public void StopAmbience()
+    {
+        ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void DelayChangeAmbience()
+    {
+        Invoke("InitializeAmbience", 2f);
     }
 
     //Call this method if you want to change the ambience intensity

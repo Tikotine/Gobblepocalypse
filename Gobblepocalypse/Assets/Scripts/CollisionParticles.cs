@@ -13,6 +13,8 @@ public class CollisionParticles : MonoBehaviour
     public int particleCount;
     public int multiplier;
 
+    private Color particleColour;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,11 +48,15 @@ public class CollisionParticles : MonoBehaviour
     }
 
     public void SetParticleColour(Collision2D c)
-    { 
-        Color temp = c.gameObject.GetComponent<Tilemap>().color;    //Detect the colour of the surface collided with
+    {
+
+        if (c.gameObject.GetComponent<Tilemap>() != null)
+        {
+            particleColour = c.gameObject.GetComponent<Tilemap>().color;    //Detect the colour of the surface collided with
+        }
 
         ParticleSystem.MainModule mm = ps.main;     //Get the main module of the particle system
-        mm.startColor = temp;       //Assign its colour to the surface colour
+        mm.startColor = particleColour;       //Assign its colour to the surface colour
     }
 
     public void SelfDestruct()

@@ -31,6 +31,7 @@ public class EndZone : MonoBehaviour
             sc.starAmt = starCount;
             ts.endTimer();
             sc.DoTransition(sceneName, musicEnum);
+            AudioManager.instance.StopAmbience();
         }
     }
 

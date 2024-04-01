@@ -11,6 +11,7 @@ public class Checkpoint : MonoBehaviour
     public GameObject player;
     public CheckpointManager cm;
     private SpriteRenderer sr;
+    private ParticleSystem ps;
     public Sprite activatedSprite;
 
     //public BossManager bm;
@@ -22,6 +23,7 @@ public class Checkpoint : MonoBehaviour
         player = GameObject.FindWithTag("Player");      //Get player based off tag
         cm = GameObject.FindWithTag("CheckpointManager").GetComponent<CheckpointManager>();     //Get the checkpointmanager based off tag
         sr = GetComponent<SpriteRenderer>();
+        ps = GetComponent<ParticleSystem>();
         /*var bossGO = GameObject.FindWithTag("BossManager");
         if (bossGO)
         {
@@ -42,6 +44,7 @@ public class Checkpoint : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.checkpointActivated, transform.position);   //Play sound at collision location
             GetComponent<BoxCollider2D>().enabled = false;
             sr.sprite = activatedSprite;
+            ps.Play();
 
             /*if (bm != null)
             {

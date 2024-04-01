@@ -296,6 +296,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "SolidPlatform" || collision.gameObject.tag == "ColourPlatform")
         {
+            Debug.Log("Play");
             GameObject impact = Instantiate (collisionParticlesObject, transform.position, Quaternion.identity) as GameObject;      //On impact, spawn particles at collision point
             impact.GetComponent<CollisionParticles>().PlayParticles(collision);     //Run the function
         }

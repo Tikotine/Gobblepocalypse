@@ -9,6 +9,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference ambience1 { get; private set; }
+    [field: SerializeField] public EventReference ambience2 { get; private set; }
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference BGMControl { get; private set; }

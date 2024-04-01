@@ -57,6 +57,7 @@ public class PauseMenu : MonoBehaviour
         {
             ResumeGame();
             sc.DoTransition("MainMenu", MusicControl.MENU);
+            AudioManager.instance.StopAmbience();
             TutorialManager.instance.CheckTutorialStatus();
             sc.starAmt = 0;
             doOnce = true;
