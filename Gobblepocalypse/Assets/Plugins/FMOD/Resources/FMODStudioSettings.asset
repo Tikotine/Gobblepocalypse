@@ -488,6 +488,8 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - Level1
+  - Menu
   - Music
   - SFX
   BanksToLoad: []
