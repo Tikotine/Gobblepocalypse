@@ -90,6 +90,11 @@ public class MainMenuManager : MonoBehaviour
         AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
     }
 
+    public void PlayButtonHover()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonHover, transform.position);   //Play sound at button location
+    }
+
     public void UpdateTimer()
     {
         if (sc.Lvl1Best != 0)

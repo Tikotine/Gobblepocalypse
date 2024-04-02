@@ -348,4 +348,14 @@ public class PlayerScript : MonoBehaviour
     {
         playerRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
+    public void PlayButtonHover()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonHover, transform.position);   //Play sound at button location
+    }
+
+    public void PlayButtonSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+    }
 }

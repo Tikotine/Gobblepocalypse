@@ -100,4 +100,14 @@ public class LevelComplete : MonoBehaviour
 
         sc.NewBest = false;
     }
+
+    public void PlayButtonHover()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonHover, transform.position);   //Play sound at button location
+    }
+
+    public void PlayButtonSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
+    }
 }

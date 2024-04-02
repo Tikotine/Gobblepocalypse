@@ -16,6 +16,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Button SFX")]
     [field: SerializeField] public EventReference buttonPress { get; private set; }
+    [field: SerializeField] public EventReference buttonHover { get; private set; }
 
     [field: Header("Transition SFX")]
     [field: SerializeField] public EventReference transitionSound { get; private set; }
