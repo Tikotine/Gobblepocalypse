@@ -152,6 +152,7 @@ public class Head : MonoBehaviour
         boss.SetCurrentState(new BossChase(boss));
         ps.ResetVelocity(); //Reset player velocity
         ps.gameObject.SetActive(true);
+        ps.StopCharging();
     }
 
     private void OnDestroy()
