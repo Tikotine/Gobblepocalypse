@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuObject;
     public GameObject settingsMenu;
     public GameObject quitMenu;
+    public GameObject bg;
     public bool isPaused = false;
     private SceneController sc;
     private bool doOnce = false;
@@ -37,6 +38,7 @@ public class PauseMenu : MonoBehaviour
         
     private void PauseGame()
     {
+        bg.SetActive(true);
         pauseMenuObject.SetActive(true);
         isPaused = true;
         Time.timeScale = 0f;
@@ -44,6 +46,7 @@ public class PauseMenu : MonoBehaviour
 
     private void ResumeGame()
     {
+        bg.SetActive(false);
         pauseMenuObject.SetActive(false);
         settingsMenu.SetActive(false);
         quitMenu.SetActive(false);
