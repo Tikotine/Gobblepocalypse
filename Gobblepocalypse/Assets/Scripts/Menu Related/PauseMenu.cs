@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject quitMenu;
     public GameObject bg;
+    private GameObject player;
+    private PlayerScript ps;
     public bool isPaused = false;
     private SceneController sc;
     private bool doOnce = false;
@@ -17,6 +19,8 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuObject.SetActive(false);
         sc = FindObjectOfType<SceneController>();
+        player = GameObject.FindWithTag("Player");
+        ps = player.GetComponent<PlayerScript>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         
     private void PauseGame()
     {
+        ps.enabled = false;
         bg.SetActive(true);
         pauseMenuObject.SetActive(true);
         isPaused = true;
@@ -46,6 +51,7 @@ public class PauseMenu : MonoBehaviour
 
     private void ResumeGame()
     {
+        ps.enabled = true;
         bg.SetActive(false);
         pauseMenuObject.SetActive(false);
         settingsMenu.SetActive(false);

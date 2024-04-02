@@ -37,5 +37,6 @@ public class DeadZone : MonoBehaviour
         cm.player.GetComponent<PlayerScript>().ResetVelocity(); //Reset player velocity
         bossScript.SetCurrentState(new BossChase(bossScript));      //Reset boss state
         player.SetActive(true);
+        player.GetComponent<PlayerScript>().StopCharging();
     }
 }
