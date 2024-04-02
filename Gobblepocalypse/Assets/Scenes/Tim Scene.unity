@@ -1263,7 +1263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822882612}
-  m_LocalRotation: {x: -0.07924447, y: -0.000000017680158, z: -0.0000000014054747, w: 0.9968552}
+  m_LocalRotation: {x: -0.07924447, y: 0.000000017680152, z: 0.0000000014054743, w: 0.9968552}
   m_LocalPosition: {x: -5.009987, y: -2.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2255,6 +2255,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   solidSticky: {fileID: 0}
   changeSticky: {fileID: 0}
+  BossUI: {fileID: 0}
+  bossHeadSprites: []
 --- !u!50 &1059368011
 Rigidbody2D:
   serializedVersion: 4
@@ -2881,6 +2883,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 0
+  pf: {fileID: 0}
   lr: {fileID: 0}
   attackDuration: 5
   attackTimer: 0
@@ -13147,7 +13150,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909396637}
-  m_LocalRotation: {x: -0.07924447, y: -0.000000017680158, z: -0.0000000014054747, w: 0.9968552}
+  m_LocalRotation: {x: -0.07924447, y: 0.000000017680152, z: 0.0000000014054743, w: 0.9968552}
   m_LocalPosition: {x: -5.009987, y: -2.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
