@@ -36,7 +36,7 @@ public class CheckpointManager : MonoBehaviour
         platformList = GameObject.FindGameObjectsWithTag("ColourPlatform");
         player = GameObject.FindWithTag("Player");
         boss = GameObject.FindWithTag("Boss");
-        bs = boss.GetComponent<Boss>();
+        bs = FindObjectOfType<Boss>();
 
         barProgress = bar.value;
 

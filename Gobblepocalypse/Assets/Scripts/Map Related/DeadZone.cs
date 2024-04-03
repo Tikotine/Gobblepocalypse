@@ -12,7 +12,7 @@ public class DeadZone : MonoBehaviour
     public void Awake()
     {
         cm = GameObject.FindWithTag("CheckpointManager").GetComponent<CheckpointManager>();     //Find Checkpoint Manager
-        bossScript = GameObject.FindWithTag("Boss").GetComponent<Boss>();     //Find Boss script
+        bossScript = FindObjectOfType<Boss>();     //Find Boss script
         sc = FindObjectOfType<SceneController>();
     }
 

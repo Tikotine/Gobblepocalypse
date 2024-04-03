@@ -124,6 +124,7 @@ public class MainMenuButtons : MonoBehaviour
             case ButtonType.YES:
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.buttonPress, transform.position);   //Play sound at button location
                 Debug.Log("YES");
+                Application.Quit();
                 //Quit Game
                 break;
 
