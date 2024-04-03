@@ -95,7 +95,7 @@ public class Head : MonoBehaviour
                 ps.gameObject.SetActive(false);
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDeath, cm.player.transform.position);   //Play sound at player location
                 sc.transition.SetTrigger("Start");
-                Invoke("Death", 1f);
+                Invoke(nameof(Death), 1f);
             }
         }
     }
